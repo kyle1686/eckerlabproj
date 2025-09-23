@@ -1,0 +1,6 @@
+DATA_FILE_RELATIVE_DIR = "./something"
+TIME_FORMAT = "%Y-%m-%d--%H-%M-%S"
+
+# change
+OVERLAY_HEIGHT = 200
+OVERLAY_WIDTH = 200
