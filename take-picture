@@ -1,0 +1,100 @@
+#!/bin/bash
+
+# --- Configuration ---
+# Set the directory where you want to save the images.
+# IMPORTANT: Use an absolute path (starts with /).
+# For example: OUTPUT_DIR="/home/pi/camera_images"
+#
+# !! CHANGE THIS TO YOUR PREFERRED FOLDER !!
+OUTPUT_DIR="/home/eckerlab/camera_images"
+
+
+# --- Script Logic (No changes needed below this line) ---
+
+# Create the output directory if it doesn't exist, suppressing errors if it does
+mkdir -p "$OUTPUT_DIR"
+
+# Generate the filename based on the current date and time
+# Format: YYYY-MM-DD--HH-MM-SS.jpeg
+FILENAME=$(date +"%Y-%m-%d--%H-%M-%S.jpeg")
+
+# Combine the directory and filename to create the full path
+FULL_PATH="$OUTPUT_DIR/$FILENAME"
+
+# Find the full path to the rpicam-jpeg command. This makes the script more reliable.
+RPICAM_CMD=$(which rpicam-jpeg)
+
+# Check if the rpicam-jpeg command was found
+if [ -z "$RPICAM_CMD" ]; then
+    # If not found, log an error and exit
+    echo "$(date): Error: rpicam-jpeg command not found. Make sure it's installed and in your system's PATH." >> "$OUTPUT_DIR/error.log"
+    exit 1
+fi
+
+# Take the picture using the found command and save it to the full path
+$RPICAM_CMD --output "$FULL_PATH"
+
+# Optional: Create a log entry to confirm the picture was taken
+echo "Image captured and saved to $FULL_PATH" >> "$OUTPUT_DIR/capture.log"
+#!/bin/bash
+
+# --- Configuration ---
+# Set the directory where you want to save the images.
+# IMPORTANT: Use an absolute path (starts with /).
+# For example: OUTPUT_DIR="/home/pi/camera_images"
+#
+# !! CHANGE THIS TO YOUR PREFERRED FOLDER !!
+OUTPUT_DIR="/home/eckerlab/camera_images"
+
+# Set the FULL, ABSOLUTE path to your Python analysis script.
+# For example: ANALYSIS_SCRIPT_PATH="/home/eckerlab/compute_green_pixels.py"
+#
+# !! CHANGE THIS TO THE LOCATION OF YOUR PYTHON SCRIPT !!
+ANALYSIS_SCRIPT_PATH="/home/eckerlab/compute_green_pixels.py"
+
+# Set the FULL, ABSOLUTE path for the output CSV file.
+# For example: CSV_OUTPUT_PATH="/home/eckerlab/analysis_results.csv"
+#
+# !! CHANGE THIS TO YOUR PREFERRED CSV LOCATION !!
+CSV_OUTPUT_PATH="/home/eckerlab/green_pixel_analysis.csv"
+
+# --- Script Logic (No changes needed below this line) ---
+
+# Create the output directory if it doesn't exist, suppressing errors if it does
+mkdir -p "$OUTPUT_DIR"
+
+# Generate the filename based on the current date and time
+# Format: YYYY-MM-DD--HH-MM-SS.jpeg
+FILENAME=$(date +"%Y-%m-%d--%H-%M-%S.jpeg")
+
+# Combine the directory and filename to create the full path
+FULL_PATH="$OUTPUT_DIR/$FILENAME"
+
+# Find the full path to the rpicam-jpeg command. This makes the script more reliable.
+RPICAM_CMD=$(which rpicam-jpeg)
+
+# Check if the rpicam-jpeg command was found
+if [ -z "$RPICAM_CMD" ]; then
+    # If not found, log an error and exit
+    echo "$(date): Error: rpicam-jpeg command not found. Make sure it's installed and in your system's PATH." >> "$OUTPUT_DIR/error.log"
+    exit 1
+
+# Take the picture using the found command and save it to the full path
+$RPICAM_CMD --output "$FULL_PATH"
+
+# Optional: Create a log entry to confirm the picture was taken
+echo "$(date): Image captured and saved to $FULL_PATH" >> "$OUTPUT_DIR/capture.log"
+
+# --- Run Analysis Script ---
+# Check if the analysis script exists before trying to run it
+if [ -f "$ANALYSIS_SCRIPT_PATH" ]; then
+    # Run the Python script to analyze the image we just took
+    # Using python3 is recommended
+    python3 "$ANALYSIS_SCRIPT_PATH" --image "$FULL_PATH" --outfile "$CSV_OUTPUT_PATH"
+    
+    # Log that the analysis was run
+    echo "$(date): Analysis complete for $FILENAME" >> "$OUTPUT_DIR/capture.log"
+else
+    # If the script doesn't exist, log an error
+    echo "$(date): Error: Analysis script not found at $ANALYSIS_SCRIPT_PATH" >> "$OUTPUT_DIR/error.log"
+fi
