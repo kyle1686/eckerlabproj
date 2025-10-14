@@ -21,7 +21,7 @@ Here's a great resource for understanding/making your automation: https://cronta
 ## Image Capture Schedule
 
 Here's an example of running the python code to capture images automatically throughout the day:
-*/20 10-18 * * * /usr/bin/python3 /home/user/your-repo-name/takepicture.py
+`*/20 10-18 * * * /usr/bin/python3 /home/user/your-repo-name/takepicture.py`
 
 ### Explanation:
 - "*/20" → Runs every **20 minutes**
@@ -36,12 +36,12 @@ Here's an example of running the python code to capture images automatically thr
 
 How to edit your crontab (change automated commands):
 1. Open crontab editor (if it's your first time, enter "1" for the easiest editor):
-crontab -e
+    `crontab -e`
 2. Scroll to the bottom (using the down arrow key)
 3. Add your cron job line (see example above)
 4. Once finished, press Ctrl + O → Press Enter to save, and Ctrl + X to exit nano
 5. Check that it saved - to see crontab, type the following and you should see your new line listed:
-crontab -l
+    `crontab -l`
 
 How to check if cron is running:
 1. Type this into the terminal: 
