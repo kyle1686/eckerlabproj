@@ -8,7 +8,7 @@ This document explains how the Raspberry Pi automatically captures images using 
 
 Each line in the crontab represents a job and follows the following structure:
 
-* * * * * command_to_run
+\* \* \* \* \* command_to_run
 | | | | |
 | | | | |_Day of week (0-6, Sunday = 0)
 | | | |____Month (1-12)
@@ -26,7 +26,7 @@ Here's an example of running the python code to capture images automatically thr
 ### Explanation:
 - "*/20" → Runs every **20 minutes**
 - "10-18" → Runs between **10 AM and 6 PM**
-- "* * *" → Every day of every month
+- "\* \* \*" → Every day of every month
 - "/usr/bin/python3" → The path to the Python 3 interpreter (to find your specific path, type "which python3" into your Raspberry Pi terminal, and it'll tell you the path, and you should use that in this location)
 - "/home/user/your-repo-name/takepicture.py" → The script that captures the image
 
@@ -36,12 +36,12 @@ Here's an example of running the python code to capture images automatically thr
 
 How to edit your crontab (change automated commands):
 1. Open crontab editor (if it's your first time, enter "1" for the easiest editor):
-    crontab -e
+crontab -e
 2. Scroll to the bottom (using the down arrow key)
 3. Add your cron job line (see example above)
 4. Once finished, press Ctrl + O → Press Enter to save, and Ctrl + X to exit nano
 5. Check that it saved - to see crontab, type the following and you should see your new line listed:
-    crontab -l
+crontab -l
 
 How to check if cron is running:
 1. Type this into the terminal: 
