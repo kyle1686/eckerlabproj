@@ -45,6 +45,6 @@ How to edit your crontab (change automated commands):
 
 How to check if cron is running:
 1. Type this into the terminal: 
-    sudo systemctl status cron
+    `sudo systemctl status cron`
 2. You should see "active (running)" somewhere
 3. Once done looking at it, type "q" to exit the status view
