@@ -38,15 +38,21 @@ Here's an example of running the python code to capture images automatically thr
 
 How to edit your crontab (change automated commands):
 1. Open crontab editor (if it's your first time, enter "1" for the easiest editor):
-`crontab -e`
+```
+crontab -e
+```
 2. Scroll to the bottom (using the down arrow key)
 3. Add your cron job line (see example above)
 4. Once finished, press Ctrl + O → Press Enter to save, and Ctrl + X to exit nano
 5. Check that it saved - to see crontab, type the following and you should see your new line listed:
-`crontab -l`
+```
+crontab -l
+```
 
 How to check if cron is running:
 1. Type this into the terminal: 
-`sudo systemctl status cron`
+```
+sudo systemctl status cron
+```
 2. You should see "active (running)" somewhere
 3. Once done looking at it, type "q" to exit the status view
