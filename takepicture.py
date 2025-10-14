@@ -8,7 +8,7 @@ def main():
     time.sleep(2)  # Allow the camera to adjust
     filename = get_file_name()
     picam2.capture_file(filename)
-    print(f"Photo saved as {filename}")
+    # print(f"Photo saved as {filename}") # Uncomment for testing
 
 def camera_config():
     picam2 = Picamera2()
