@@ -1,3 +1,5 @@
+import takepicture
+
 def main():
     check_for_log_make_if_none()
     take_picture()
