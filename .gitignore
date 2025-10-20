@@ -1,0 +1,9 @@
+# Ignore Virtual Environments
+plant_env/
+venv/
+.env/
+
+# Ignore Jupyter Lab workspace and checkpoints
+.ipynb_checkpoints/
+.jupyter/
+__pycache__/
