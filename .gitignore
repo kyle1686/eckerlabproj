@@ -8,4 +8,5 @@ venv/
 .jupyter/
 __pycache__/
 
+# macOS system files
 .DS_Store
