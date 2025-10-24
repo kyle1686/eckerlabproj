@@ -12,5 +12,4 @@ __pycache__/
 .DS_Store
 
 # Raspberry Pi Files
-.Image_Holder
-.Temp_Staging_Area
+Image_Holder/
