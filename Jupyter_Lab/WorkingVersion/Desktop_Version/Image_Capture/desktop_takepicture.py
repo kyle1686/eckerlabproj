@@ -5,8 +5,8 @@ import time
 import os
 
 # Paths:
-image_save_path = "/home/user300/Images" # Change this to desired directory
-possible_types_path = "/Users/maxwellrosen/Storage/Salk_Plant_Imaging/eckerlabproj/Jupyter_Lab/WorkingVersion/Desktop_Version/Image_Capture/possible_types.csv"
+image_save_path = "eckerlabproj/Jupyter_Lab/WorkingVersion/Desktop_Version/Image_Holder/Temp_Staging_Area" # Change this to temporary staging directory
+possible_types_path = "/Users/maxwellrosen/Storage/Salk_Plant_Imaging/eckerlabproj/Jupyter_Lab/WorkingVersion/Desktop_Version/Image_Capture/possible_types.csv" # Change this to where the possible genotypes and stress list for the plates we're working with is
 
 def main():
     picam2 = camera_config()
@@ -38,7 +38,7 @@ def get_genotype():
     df = pd.read_csv(possible_types_path)
     unique_genotype_options = df[['genotype_number', 'genotype']].drop_duplicates()
     print("Possible Genotype Selections (edit possible_types.csv if incorrect):")
-    for _, row in genotypes.iterrows():
+    for _, row in unique_genotype_options.iterrows():
         print(f"{row['genotype_number']}: {row['genotype']}")
     genotype_input = int(input("Enter genotype number: "))
     genotype = df[df['genotype_number'] == g_num]['genotype'].iloc[0]
@@ -46,9 +46,9 @@ def get_genotype():
 
 def get_stress():
     df = pd.read_csv(possible_types_path)
-    unique_genotype_options = df[['stress_number', 'stress']].drop_duplicates()
+    unique_stress_options = df[['stress_number', 'stress']].drop_duplicates()
     print("Possible Stress Selections (edit possible_types.csv if incorrect):")
-    for _, row in genotypes.iterrows():
+    for _, row in unique_stress_options.iterrows():
         print(f"{row['stress_number']}: {row['stress']}")
     stress_input = int(input("Enter stress number: "))
     stress = df[df['stress_number'] == s_num]['stress'].iloc[0]

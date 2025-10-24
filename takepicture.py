@@ -3,6 +3,9 @@ from datetime import datetime
 import time
 import os
 
+# Paths:
+image_save_path = "/home/user300/Images" # Change this to desired directory
+
 def main():
     picam2 = camera_config()
     time.sleep(2)  # Allow the camera to adjust
@@ -18,7 +21,7 @@ def camera_config():
     return picam2
 
 def get_file_name():
-    save_path = "/home/user300/Images" # Change this to desired directory
+    save_path = image_save_path
     os.makedirs(save_path, exist_ok=True) # Ensure directory exists
     filename = os.path.join(save_path, f"image_{get_current_time()}.jpg")
     return filename
