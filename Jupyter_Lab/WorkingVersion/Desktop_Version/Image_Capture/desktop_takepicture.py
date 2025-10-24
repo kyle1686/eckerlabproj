@@ -5,7 +5,7 @@ import time
 import os
 
 # Paths:
-image_save_path = "eckerlabproj/Jupyter_Lab/WorkingVersion/Desktop_Version/Image_Holder/Temp_Staging_Area" # Change this to temporary staging directory
+image_save_dir = "eckerlabproj/Jupyter_Lab/WorkingVersion/Desktop_Version/Image_Holder/Temp_Staging_Area" # Change this to temporary staging directory
 possible_types_path = "/Users/maxwellrosen/Storage/Salk_Plant_Imaging/eckerlabproj/Jupyter_Lab/WorkingVersion/Desktop_Version/Image_Capture/possible_types.csv" # Change this to where the possible genotypes and stress list for the plates we're working with is
 
 def main():
@@ -31,7 +31,7 @@ def get_file_name():
         confirmation_input = print(f"\nSatisfied? (Enter to confirm, \"r\" to redo): ")
         if confirmation_input.lower().strip() != r:
             break
-    filename = os.path.join(image_save_path, f"{genotype}_{stress}_{get_current_time()}.jpg")
+    filename = os.path.join(image_save_dir, f"{genotype}_{stress}_{get_current_time()}.jpg")
     return filename
 
 def get_genotype():
