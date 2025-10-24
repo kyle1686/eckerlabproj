@@ -13,3 +13,4 @@ __pycache__/
 
 # Raspberry Pi Files
 .Image_Holder
+.Temp_Staging_Area
