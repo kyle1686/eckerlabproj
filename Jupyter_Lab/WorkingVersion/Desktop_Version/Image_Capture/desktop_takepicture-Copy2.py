@@ -1,12 +1,15 @@
 from picamera2 import Picamera2, Preview
 from datetime import datetime
-import pandas as pd
 import time
 import os
 
 # Paths:
 image_save_dir = "eckerlabproj/Jupyter_Lab/WorkingVersion/Desktop_Version/Image_Holder/Temp_Staging_Area" # Change this to temporary staging directory
 possible_types_path = "/Users/maxwellrosen/Storage/Salk_Plant_Imaging/eckerlabproj/Jupyter_Lab/WorkingVersion/Desktop_Version/Image_Capture/possible_types.csv" # Change this to where the possible genotypes and stress list for the plates we're working with is
+
+# Temporary
+genotypes=["Salk_080561c", "Col-0", "Salk_098896", "SailSeq_201_G03", "Salk_052070", "Salk_50.E01.1", "Salk_203144", "SailSeq_5_E01.1", "Salk_102761c", "Salk_056202c", "Salk_002822c"]
+stress = [100, 25]
 
 def main():
     picam2 = camera_config()
@@ -23,7 +26,7 @@ def camera_config():
     return picam2
 
 def get_file_name():
-    os.makedirs(save_path, exist_ok=True) # Ensure directory exists
+    os.makedirs(image_save_dir, exist_ok=True) # Ensure directory exists
     while True:
         genotype = get_genotype()
         stress = get_stress()
@@ -35,24 +38,12 @@ def get_file_name():
     return filename
 
 def get_genotype():
-    df = pd.read_csv(possible_types_path)
-    unique_genotype_options = df[['genotype_number', 'genotype']].drop_duplicates()
-    print("Possible Genotype Selections (edit possible_types.csv if incorrect):")
-    for _, row in unique_genotype_options.iterrows():
-        print(f"{row['genotype_number']}: {row['genotype']}")
     genotype_input = int(input("Enter genotype number: "))
-    genotype = df[df['genotype_number'] == g_num]['genotype'].iloc[0]
-    return genotype
+    return genotypes[genotype_input]
 
 def get_stress():
-    df = pd.read_csv(possible_types_path)
-    unique_stress_options = df[['stress_number', 'stress']].drop_duplicates()
-    print("Possible Stress Selections (edit possible_types.csv if incorrect):")
-    for _, row in unique_stress_options.iterrows():
-        print(f"{row['stress_number']}: {row['stress']}")
     stress_input = int(input("Enter stress number: "))
-    stress = df[df['stress_number'] == s_num]['stress'].iloc[0]
-    return stress
+    return stress[stress_input]
 
 def get_current_time():
     timestamp = datetime.now().strftime("%Y-%m-%d--%H-%M-%S")
