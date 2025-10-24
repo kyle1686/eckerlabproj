@@ -10,3 +10,6 @@ __pycache__/
 
 # macOS system files
 .DS_Store
+
+# Raspberry Pi Files
+.Image_Holder
