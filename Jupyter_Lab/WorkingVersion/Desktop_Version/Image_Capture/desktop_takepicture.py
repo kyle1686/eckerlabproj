@@ -8,7 +8,7 @@ import os
 image_save_dir = "eckerlabproj/Jupyter_Lab/WorkingVersion/Desktop_Version/Image_Holder/Temp_Staging_Area" # Change this to temporary staging directory
 possible_types_path = "/Users/maxwellrosen/Storage/Salk_Plant_Imaging/eckerlabproj/Jupyter_Lab/WorkingVersion/Desktop_Version/Image_Capture/possible_types.csv" # Change this to where the possible genotypes and stress list for the plates we're working with is
 
-def main():
+def take_picture():
     picam2 = camera_config()
     time.sleep(2)  # Allow the camera to adjust
     filename = get_file_name()
@@ -59,4 +59,4 @@ def get_current_time():
     return timestamp
 
 if __name__ == "__main__":
-    main()
+    take_picture()

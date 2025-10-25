@@ -1,9 +1,5 @@
-plant_number,plant_name,Area (mm^2),Uncertainty (mm^2)
-plant1,Tray1,53668.0,107336.0
-plant2,Tray1,103836.0,207672.0
-plant3,Tray1,84856.0,169712.0
-plant4,Tray1,92696.0,185392.0
-plant1,Tray1,53668.0,107336.0
-plant2,Tray1,103836.0,207672.0
-plant3,Tray1,84856.0,169712.0
-plant4,Tray1,92696.0,185392.0
+time,plant_number,plant_name,stress_level (%),Area (mm^2)
+2025-10-24--12-25-47,plant1,Col-0,25,4745.410295515802
+2025-10-24--12-25-47,plant2,Col-0,25,9181.344999723837
+2025-10-24--12-25-47,plant3,Col-0,25,7503.103078860567
+2025-10-24--12-25-47,plant4,Col-0,25,8196.328403389967
