@@ -27,6 +27,8 @@ def process_desktop_images():
     # To access more than just what's in your Base Directory, use the following:
     # BASE_DIR os.chdir("/path/to/your/folder")
 
+    BASE_DIR = "/home/user300/Project_Folder/eckerlabproj/Jupyter_Lab/WorkingVersion/Desktop_Version"
+
     # Uncomment to see what the Base Directory is, so you know the levels to add for the following paths
     print(f"Base Directory = {BASE_DIR}")
 
@@ -252,15 +254,5 @@ def process_desktop_images():
 
     # plt.close('all')
 
-
-    # In[ ]:
-
-
-
-
-
-    # In[ ]:
-
-
-
-
+if __name__ == "__main__":
+    process_desktop_images()

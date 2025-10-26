@@ -9,3 +9,6 @@ def run_all():
     
     # Step 2: Process Captured Images
     process_desktop_images()
+
+if __name__ == "__main__":
+    run_all()
