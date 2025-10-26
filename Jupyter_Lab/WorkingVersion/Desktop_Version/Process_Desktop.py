@@ -9,7 +9,7 @@
 
 from plantcv import plantcv as pcv
 from plantcv.parallel import WorkflowInputs
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 import pandas as pd
 import os
 import json
@@ -41,8 +41,6 @@ def process_desktop_images():
     filename = files[-1]
     image_name = filename
     image_path = os.path.join(image_dir, image_name)
-
-    filename = "Salk-056202c_25_2025-10-26--16-00-34"
 
     # Change to Chamber folder: this is where the temporary data on pixel number in plants is saved
     temp_desktop_image_results = os.path.join(BASE_DIR, "Temp_Results", "temp_desktop_image_results.json")
@@ -123,7 +121,7 @@ def process_desktop_images():
 
 
     # Visualization only, not needed for analysis
-    hist_figure1, hist_data1 = pcv.visualize.histogram(img = channeled_img, hist_data=True)
+    # hist_figure1, hist_data1 = pcv.visualize.histogram(img = channeled_img, hist_data=True)
 
 
     # In[11]:
@@ -179,14 +177,14 @@ def process_desktop_images():
 
 
     # Outputs analyzed image
-    shape_image = pcv.analyze.size(img=crop_img, labeled_mask=labeled_mask, n_labels=num_plants)
+    # shape_image = pcv.analyze.size(img=crop_img, labeled_mask=labeled_mask, n_labels=num_plants)
 
 
     # In[18]:
 
 
     # Makes histogram of colors inside ROI
-    color_histogram = pcv.analyze.color(rgb_img=crop_img, labeled_mask=kept_mask, colorspaces='all', label="default")
+    # color_histogram = pcv.analyze.color(rgb_img=crop_img, labeled_mask=kept_mask, colorspaces='all', label="default")
 
 
     # In[19]:
@@ -252,7 +250,7 @@ def process_desktop_images():
     # In[23]:
 
 
-    plt.close('all')
+    # plt.close('all')
 
 
     # In[ ]:
