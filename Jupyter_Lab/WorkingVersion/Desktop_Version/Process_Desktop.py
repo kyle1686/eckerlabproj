@@ -5,7 +5,7 @@
 
 
 # only needed in Jupyter Lab to see the images inline
-get_ipython().run_line_magic('matplotlib', 'widget')
+# get_ipython().run_line_magic('matplotlib', 'widget')
 
 from plantcv import plantcv as pcv
 from plantcv.parallel import WorkflowInputs
