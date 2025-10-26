@@ -1,11 +1,10 @@
 from picamera2 import Picamera2, Preview
 from datetime import datetime
-import pandas as pd
 import time
 import os
 
 # Paths:
-image_save_dir = "/Users/maxwellrosen/Storage/Salk_Plant_Imaging/eckerlabproj/Jupyter_Lab/WorkingVersion/Desktop_Version/Pixels_to_mm - still has to be fixed to Desktop Version/Calibration_Image" # Change this to temporary Calibration Image directory
+image_save_dir = "/home/user300/Project_Folder/eckerlabproj/Jupyter_Lab/WorkingVersion/Desktop_Version/Pixels_to_mm/Calibration_Image" # Change this to temporary Calibration Image directory
 
 def take_picture():
     picam2 = camera_config()
