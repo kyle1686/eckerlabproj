@@ -8,7 +8,7 @@ def run_all():
     take_picture()
     
     # Step 2: Process Captured Images
-    process_desktop_images()
+    process_single_desktop_image()
 
 if __name__ == "__main__":
     run_all()

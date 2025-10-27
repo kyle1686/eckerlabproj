@@ -8,7 +8,7 @@
 # get_ipython().run_line_magic('matplotlib', 'widget')
 
 import os
-os.environ["QT_QPA_PLATFORM"] = "offscreen"
+# os.environ["QT_QPA_PLATFORM"] = "offscreen"
 from plantcv import plantcv as pcv
 from plantcv.parallel import WorkflowInputs
 # import matplotlib.pyplot as plt
@@ -17,32 +17,22 @@ import json
 import shutil
 
 
-def process_desktop_images():
+def process_single_desktop_image(filename, BASE_DIR):
     # In[2]:
 
 
     # Central Path Locations
 
     # Makes Base Directory where this script is running from:
-    BASE_DIR = os.getcwd()
+    # BASE_DIR = os.getcwd()
     # To access more than just what's in your Base Directory, use the following:
     # BASE_DIR os.chdir("/path/to/your/folder")
 
-    BASE_DIR = "/home/user300/Project_Folder/eckerlabproj/Jupyter_Lab/WorkingVersion/Desktop_Version"
 
     # Uncomment to see what the Base Directory is, so you know the levels to add for the following paths
     print(f"Base Directory = {BASE_DIR}")
 
-    # Change to where the image grabbed's dierctory (Temp_Staging_Area)
     image_dir = os.path.join(BASE_DIR, "Image_Holder", "Temp_Staging_Area")
-    # For grabbing the image: Finds the only file in the folder
-    files = [f for f in os.listdir(image_dir) if not f.startswith(".")]
-    if len(files) == 0:
-        raise FileNotFoundError(f"No files found in {image_dir}.")
-    elif len(files) > 1:
-        print(f"Warning: More than one image in {image_dir}, using the newest one.")
-    files = sorted(files, key=lambda x: os.path.getmtime(os.path.join(image_dir, x)))
-    filename = files[-1]
     image_name = filename
     image_path = os.path.join(image_dir, image_name)
 
@@ -74,7 +64,7 @@ def process_desktop_images():
         result=temp_desktop_image_results,
         outdir=".",
         writeimg=False,
-        debug="plot"
+        debug=None # set to "print" to just print steps, "plot" to see images at each step, None to not display any figures
         )
 
 
@@ -179,7 +169,7 @@ def process_desktop_images():
 
 
     # Outputs analyzed image
-    # shape_image = pcv.analyze.size(img=crop_img, labeled_mask=labeled_mask, n_labels=num_plants)
+    shape_image = pcv.analyze.size(img=crop_img, labeled_mask=labeled_mask, n_labels=num_plants)
 
 
     # In[18]:
@@ -254,5 +244,21 @@ def process_desktop_images():
 
     # plt.close('all')
 
+def process_all_desktop_images():
+    BASE_DIR = "/Users/maxwellrosen/Storage/Salk_Plant_Imaging/eckerlabproj/Jupyter_Lab/WorkingVersion/Desktop_Version"
+    image_dir = os.path.join(BASE_DIR, "Image_Holder", "Temp_Staging_Area")
+    files = [f for f in os.listdir(image_dir) if not f.startswith(".")]
+    if len(files) == 0:
+        raise FileNotFoundError(f"No image files found in {image_dir}.")
+    files = sorted(files, key=lambda x: os.path.getmtime(os.path.join(image_dir, x)))
+    print(f"Found {len(files)} images to process.\n")
+    for i,filename in enumerate(files, start=1):
+        print(f"({i}/{len(files)}) Processing image: {filename}")
+        try:
+            process_single_desktop_image(filename, BASE_DIR)
+            print(f"Finished processing {filename}.\n")
+        except Exception as e:
+            print(f"Error processing {filename}: {e}\n")
+
 if __name__ == "__main__":
-    process_desktop_images()
+    process_all_desktop_images()
