@@ -28,8 +28,8 @@ def get_file_name():
         genotype = get_genotype()
         stress = get_stress()
         print(f"\nSelected → Genotype: {genotype}, Stress: {stress}")
-        confirmation_input = print(f"\nSatisfied? (Enter to confirm, \"r\" to redo): ")
-        if confirmation_input.lower().strip() != r:
+        confirmation_input = input(f"\nSatisfied? (Enter to confirm, \"r\" to redo): ")
+        if confirmation_input.lower().strip() != "r":
             break
     filename = os.path.join(image_save_dir, f"{genotype}_{stress}_{get_current_time()}.jpg")
     return filename
@@ -41,7 +41,7 @@ def get_genotype():
     for _, row in unique_genotype_options.iterrows():
         print(f"{row['genotype_number']}: {row['genotype']}")
     genotype_input = int(input("Enter genotype number: "))
-    genotype = df[df['genotype_number'] == g_num]['genotype'].iloc[0]
+    genotype = df[df['genotype_number'] == genotype_input]['genotype'].iloc[0]
     return genotype
 
 def get_stress():
@@ -51,7 +51,7 @@ def get_stress():
     for _, row in unique_stress_options.iterrows():
         print(f"{row['stress_number']}: {row['stress']}")
     stress_input = int(input("Enter stress number: "))
-    stress = df[df['stress_number'] == s_num]['stress'].iloc[0]
+    stress = df[df['stress_number'] == stress_input]['stress'].iloc[0]
     return stress
 
 def get_current_time():

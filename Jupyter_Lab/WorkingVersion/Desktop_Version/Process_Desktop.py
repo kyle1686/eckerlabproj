@@ -7,11 +7,12 @@
 # only needed in Jupyter Lab to see the images inline
 # get_ipython().run_line_magic('matplotlib', 'widget')
 
+import os
+os.environ["QT_QPA_PLATFORM"] = "offscreen"
 from plantcv import plantcv as pcv
 from plantcv.parallel import WorkflowInputs
 # import matplotlib.pyplot as plt
 import pandas as pd
-import os
 import json
 import shutil
 
@@ -40,6 +41,7 @@ def process_desktop_images():
         raise FileNotFoundError(f"No files found in {image_dir}.")
     elif len(files) > 1:
         print(f"Warning: More than one image in {image_dir}, using the newest one.")
+    files = sorted(files, key=lambda x: os.path.getmtime(os.path.join(image_dir, x)))
     filename = files[-1]
     image_name = filename
     image_path = os.path.join(image_dir, image_name)
@@ -50,8 +52,6 @@ def process_desktop_images():
     analysis_results_csv_path = os.path.join(BASE_DIR, "Final_Data", "desktop_analysis_log.csv")
     # Change to location where scale_values is saved
     scale_values_path = os.path.join(BASE_DIR, "Pixels_to_mm", "scale_values.json")
-    # Change to location where plant_names.csv is saved
-    plant_names_path = os.path.join(BASE_DIR, "desktop_plant_names.csv")
 
 
     # In[3]:
@@ -109,7 +109,7 @@ def process_desktop_images():
 
 
     # Shows options for which channel to view the image through (ideally want the most contrast)
-    colorspace_img = pcv.visualize.colorspaces(rgb_img=crop_img)
+    # colorspace_img = pcv.visualize.colorspaces(rgb_img=crop_img)
 
 
     # In[9]:
