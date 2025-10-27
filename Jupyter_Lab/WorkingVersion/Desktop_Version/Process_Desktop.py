@@ -92,7 +92,7 @@ def process_single_desktop_image(filename, BASE_DIR):
 
 
     # Crops your image
-    crop_img = pcv.crop(img=img, x=910, y=260, h=1610, w=1560)
+    crop_img = pcv.crop(img=img, x=845, y=220, h=1664, w=1653)
 
 
     # In[8]:
@@ -134,7 +134,7 @@ def process_single_desktop_image(filename, BASE_DIR):
 
 
     # Defines Region of Interest (ROI) which selects white pixels and deselects black pixels from a masked image
-    roi = pcv.roi.rectangle(img=cleaned_mask, x=100, y=200, h=300, w=1350)
+    roi = pcv.roi.rectangle(img=cleaned_mask, x=110, y=200, h=500, w=1400)
 
 
     # In[14]:
