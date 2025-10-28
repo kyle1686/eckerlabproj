@@ -3,10 +3,8 @@ from datetime import datetime
 import time
 import os
 
-CONTINUE EDITING PATHS HERE FOR CHAMBER2
-
 # Paths:
-image_save_path = "/home/user2/Chamber1Folder/Google_Drive/C1_Calibration" # Change this to desired directory - GOOGLE DRIVE!
+image_save_path = "/home/user2/Chamber2_Folder/Google_Drive/C2_Calibration" # Change this to desired directory - GOOGLE DRIVE!
 
 def main():
     picam2 = camera_config()
@@ -25,7 +23,7 @@ def camera_config():
 def get_file_name():
     save_path = image_save_path
     os.makedirs(save_path, exist_ok=True) # Ensure directory exists
-    filename = os.path.join(save_path, f"Chamber1_calibration_image_{get_current_time()}.jpg")
+    filename = os.path.join(save_path, f"Chamber2_calibration_image_{get_current_time()}.jpg")
     return filename
 
 def get_current_time():

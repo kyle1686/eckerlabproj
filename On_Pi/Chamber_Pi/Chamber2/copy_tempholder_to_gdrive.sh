@@ -1,1 +1,1 @@
-rclone copy /home/chamberuser1/Chamber1Folder/Google_Drive/Temp_C1_Holder gdrive:Chamber/Temp_C1_Holder
+rclone copy /home/user2/Chamber2_Folder/Google_Drive/Temp_C2_Holder gdrive:Chamber/Temp_C2_Holder
