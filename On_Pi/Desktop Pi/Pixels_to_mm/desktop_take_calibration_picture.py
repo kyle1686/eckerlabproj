@@ -4,7 +4,7 @@ import time
 import os
 
 # Paths:
-image_save_dir = "/home/user300/Project_Folder/eckerlabproj/Jupyter_Lab/WorkingVersion/Desktop_Version/Pixels_to_mm/Calibration_Image" # Change this to temporary Calibration Image directory
+image_save_dir = "/home/user300/Project_Folder/Google_Drive/Image_Holder/Calibration_Image" # Change this to Calibration Image directory in Google Drive Folder
 
 def take_picture():
     picam2 = camera_config()
