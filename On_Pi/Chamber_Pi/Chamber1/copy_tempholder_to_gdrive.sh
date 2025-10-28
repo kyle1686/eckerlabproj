@@ -1,0 +1,1 @@
+rclone copy /home/chamberuser1/Chamber1Folder/Google_Drive/Temp_C1_Holder gdrive:Chamber/Temp_C1_Holder
