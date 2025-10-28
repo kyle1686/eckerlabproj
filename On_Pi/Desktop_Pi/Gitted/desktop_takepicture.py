@@ -5,8 +5,8 @@ import time
 import os
 
 # Paths:
-image_save_dir = "/home/user300/Project_Folder/eckerlabproj/Jupyter_Lab/WorkingVersion/Desktop_Version/Image_Holder/Temp_Staging_Area" # Change this to temporary staging directory
-possible_types_path = "/home/user300/Project_Folder/eckerlabproj/Jupyter_Lab/WorkingVersion/Desktop_Version/Image_Holder/Temp_Staging_Area/possible_types.csv" # Change this to where the possible genotypes and stress list for the plates we're working with is
+image_save_dir = "/home/user300/Project_Folder/Google_Drive/Image_Holder/Temp_Staging_Area" # Change this to temporary staging directory
+possible_types_path = "/home/user300/Project_Folder/eckerlabproj/On_Pi/Desktop_Pi/possible_types.csv" # Change this to where the possible genotypes and stress list for the plates we're working with is
 
 def take_picture():
     picam2 = camera_config()
