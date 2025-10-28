@@ -23,7 +23,7 @@ def camera_config():
 def get_file_name():
     save_path = image_save_path
     os.makedirs(save_path, exist_ok=True) # Ensure directory exists
-    filename = os.path.join(save_path, f"image_{get_current_time()}.jpg")
+    filename = os.path.join(save_path, f"Chamber#_image_{get_current_time()}.jpg")
     return filename
 
 def get_current_time():
