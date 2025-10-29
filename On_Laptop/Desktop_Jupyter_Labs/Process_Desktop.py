@@ -22,13 +22,6 @@ def process_single_desktop_image(filename, BASE_DIR):
 
 
     # Central Path Locations
-
-    # Makes Base Directory where this script is running from:
-    # BASE_DIR = os.getcwd()
-    # To access more than just what's in your Base Directory, use the following:
-    # BASE_DIR os.chdir("/path/to/your/folder")
-
-
     # Uncomment to see what the Base Directory is, so you know the levels to add for the following paths
     print(f"Base Directory = {BASE_DIR}")
 
