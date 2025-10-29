@@ -7,11 +7,12 @@ temp_image_holder_dir = "/home/chamberuser1/Chamber1Folder/Google_Drive/Temp_C1_
 def recopy_to_gdrive():
     gdrive_remote_path = "gdrive:Chamber/Temp_C1_Holder"
     temp_image_holder_on_pi = "/home/chamberuser1/Chamber1Folder/Google_Drive/Temp_C1_Holder"
-    subprocess.run(
-        ["rclone", "copy", temp_image_holder_on_pi, gdrive_remote_path],
-        check=True
-    )
-    print(f"Successfully copied {temp_image_holder_on_pi} → {gdrive_remote_path}")
+    try:
+        subprocess.run(
+            ["rclone", "copy", temp_image_holder_on_pi, gdrive_remote_path],
+            check=True
+        )
+        print(f"Successfully copied {temp_image_holder_on_pi} → {gdrive_remote_path}")
     except subprocess.CalledProcessError as e:
         print(f"Upload failed: {e}")
     except FileNotFoundError:
