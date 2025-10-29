@@ -16,7 +16,7 @@ def recopy_to_gdrive():
     except FileNotFoundError:
         print("rclone not found — make sure it's installed and in PATH.")
     
-def delete_temp_images(directory = temp_image_holder_dir):
+def delete_temp_images(directory = temp_image_holder_on_pi):
     deleted = 0
     for root, _, files in os.walk(directory):
         for filename in files:
