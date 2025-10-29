@@ -66,7 +66,7 @@ def process_single_chamber1_image(filename, BASE_DIR, image_dir):
     
     
     # Crops your image
-    crop_img = pcv.crop(img=img, x=960, y=230, w=1773, h=1769)
+    crop_img = pcv.crop(img=img, x=980, y=305, w=1773, h=1769)
 
     
     # Actually picks a channel with rgb2gray_"lab" and then the channel is the letter from "lab" that you look through
