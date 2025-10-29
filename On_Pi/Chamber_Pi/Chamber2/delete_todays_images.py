@@ -1,12 +1,10 @@
 import os
 import subprocess
 
-# Paths:
-temp_image_holder_dir = "/home/chamberuser1/Chamber1Folder/Google_Drive/Temp_C1_Holder" # Change this to desired directory - GOOGLE DRIVE!
 
 def recopy_to_gdrive():
-    gdrive_remote_path = "gdrive:Chamber/Temp_C1_Holder"
-    temp_image_holder_on_pi = "/home/chamberuser1/Chamber1Folder/Google_Drive/Temp_C1_Holder"
+    gdrive_remote_path = "gdrive:Chamber/Temp_C2_Holder"
+    temp_image_holder_on_pi = "/home/user2/Chamber2_Folder/Google_Drive/Temp_C2_Holder"
     try:
         subprocess.run(
             ["rclone", "copy", temp_image_holder_on_pi, gdrive_remote_path],
