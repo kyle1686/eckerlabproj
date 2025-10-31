@@ -27,7 +27,7 @@ def get_file_name():
     return filename
 
 def get_current_time():
-    timestamp = datetime.now().strftime("%Y-%m-%d--%H-%M-%S")
+    timestamp = datetime.now().strftime("%Y-%m-%d--%H-%M")
     return timestamp
 
 if __name__ == "__main__":

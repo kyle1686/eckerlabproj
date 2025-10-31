@@ -74,7 +74,7 @@ def process_single_chamber1_image(filename, BASE_DIR, image_dir):
 
 
     # Masks the image
-    thresh_mask = pcv.threshold.binary(gray_img=channeled_img, threshold=175, object_type='dark')
+    thresh_mask = pcv.threshold.binary(gray_img=channeled_img, threshold=188, object_type='dark')
     
     
     # Deletes groups of pixels less than the pixel size (weird dots around edges not plant is unmasked)
@@ -87,7 +87,7 @@ def process_single_chamber1_image(filename, BASE_DIR, image_dir):
                                (1049,186), (1264,196), (1460,196), (1657,172), 
                                (106,483), (292,426), (517,459), (728,469), 
                                (1030,488), (1211,507), (1438,526), (1642,507), 
-                               (91,766), (302,747), (508,751), (723,785), 
+                               (91,766), (302,747), (506,751), (723,785), 
                                (996,804), (1192,761), (1441,751), (1654,814), 
                                (77,1034), (312,1039), (508,1039), (723,1034), 
                                (986,1072), (1202,1077), (1446,1086), (1659,1110), 
