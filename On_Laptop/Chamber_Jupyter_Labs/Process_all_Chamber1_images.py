@@ -162,7 +162,7 @@ def process_all_chamber1_images():
     if len(files) == 0:
         raise FileNotFoundError(f"No image files found in {image_dir}.")
     files = sorted(files, key=lambda x: os.path.getmtime(os.path.join(image_dir, x)))
-    print(f"Found {len(files)} images to process.\n")
+    print(f"Found {len(files)} Chamber1 images to process.\n")
     for i,filename in enumerate(files, start=1):
         print(f"({i}/{len(files)}) Processing image: {filename}")
         try:
