@@ -1,0 +1,1 @@
+rclone copy /home/user300/Project_Folder/Google_Drive/Image_Holder/Temp_C3_Holder gdrive:Chamber/Temp_C3_Holder
