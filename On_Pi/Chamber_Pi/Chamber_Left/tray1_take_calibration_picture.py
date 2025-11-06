@@ -4,7 +4,7 @@ import time
 import os
 
 # Paths:
-image_save_path = "/home/user2/Chamber2_Folder/Google_Drive/C2_Calibration/Tray1_Calibration" # Change this to desired directory - GOOGLE DRIVE!
+cl_t1_image_save_path = "/home/user2/Chamber2_Folder/Google_Drive/C2_Calibration/Tray1_Calibration" # Change this to desired directory - GOOGLE DRIVE!
 
 def main():
     picam2 = camera_config()
@@ -21,7 +21,7 @@ def camera_config():
     return picam2
 
 def get_file_name():
-    save_path = image_save_path
+    save_path = cl_t1_image_save_path
     os.makedirs(save_path, exist_ok=True) # Ensure directory exists
     filename = os.path.join(save_path, f"Tray1_calibration_image_{get_current_time()}.jpg")
     return filename

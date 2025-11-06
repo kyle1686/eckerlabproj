@@ -2,16 +2,16 @@ import os
 import subprocess
 
 # Paths:
-gdrive_remote_path = "gdrive:Chamber/Temp_CLeft_Holder"
+cl_gdrive_remote_path = "gdrive:Chamber/Temp_CLeft_Holder"
 temp_image_holder_on_pi = "/home/user2/Chamber2_Folder/Google_Drive/Temp_CLeft_Holder"
 
 def recopy_to_gdrive():
     try:
         subprocess.run(
-            ["rclone", "copy", temp_image_holder_on_pi, gdrive_remote_path],
+            ["rclone", "copy", temp_image_holder_on_pi, cl_gdrive_remote_path],
             check=True
         )
-        print(f"Successfully copied {temp_image_holder_on_pi} → {gdrive_remote_path}")
+        print(f"Successfully copied {temp_image_holder_on_pi} → {cl_gdrive_remote_path}")
     except subprocess.CalledProcessError as e:
         print(f"Upload failed: {e}")
     except FileNotFoundError:
