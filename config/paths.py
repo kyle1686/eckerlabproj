@@ -22,6 +22,26 @@ cl_t3_image_save_path = '/home/user2/Chamber2_Folder/Google_Drive/C2_Calibration
 TODO
 
 
+# Processing Paths:
+
+# Tray 1 Paths:
+
+# Tray 2 Paths:
+
+# Tray 3 Paths:
+
+# Tray 4 Paths:
+
+# Tray 5 Paths:
+
+# Tray 6 Paths:
+
+# Tray 7 Paths:
+
+# Tray 8 Paths:
+
+
+
 TEMP_CHAMBER_IMAGE_RESULTS = "./On_Laptop/Chamber_Jupyter_Labs/Chamber1/temp_chamber_image_results.json"
 
 SCALE_VALUE_PATH = "./On_Laptop/Chamber_Jupyter_Labs/Chamber1/Pixels_to_mm_C1/scale_values.json"
