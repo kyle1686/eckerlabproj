@@ -1,10 +1,17 @@
+import sys
+# Change to repository root, so it can find the config folder with the paths inside it
+cm_repo_root = '/home/chamberuser1/Salk_Project_Folder/eckerlabproj'
+# Add config folder with paths to Python's import search path
+if cm_repo_root not in sys.path:
+    sys.path.insert(0, cl_repo_root)
+
+import config.paths as paths
+
 from picamera2 import Picamera2, Preview
 from datetime import datetime
 import time
 import os
 
-# Paths:
-image_save_path = "/home/chamberuser1/Chamber1Folder/Google_Drive/C1_Calibration/Tray5_Calibration" # Change this to desired directory - GOOGLE DRIVE!
 
 def main():
     picam2 = camera_config()
@@ -21,7 +28,7 @@ def camera_config():
     return picam2
 
 def get_file_name():
-    save_path = image_save_path
+    save_path = paths.cm_t5_calibimage_save_path
     os.makedirs(save_path, exist_ok=True) # Ensure directory exists
     filename = os.path.join(save_path, f"Tray5_calibration_image_{get_current_time()}.jpg")
     return filename

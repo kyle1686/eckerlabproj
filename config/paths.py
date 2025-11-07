@@ -22,9 +22,14 @@ cm_gdrive_remote_path = 'gdrive:Chamber'
 cm_t4_calibimage_save_path =  '/home/chamberuser1/Salk_Project_Folder/Google_Drive/CMiddle_Calibration/Tray4_Calibration'
 cm_t5_calibimage_save_path = '/home/chamberuser1/Salk_Project_Folder/Google_Drive/CMiddle_Calibration/Tray5_Calibration'
 
-
 # Chamber Right (cr) Paths:
-TODO
+cr_repo_root = '/home/user300/Salk_Project_Folder/eckerlabproj'
+cr_image_save_path = '/home/user300/Salk_Project_Folder/Google_Drive/CRight_Holder'
+cr_gdrive_remote_path = 'gdrive:Chamber'
+cr_t6_calibimage_save_path =  '/home/user300/Salk_Project_Folder/Google_Drive/CRight_Calibration/Tray6_Calibration'
+cr_t7_calibimage_save_path = '/home/user300/Salk_Project_Folder/Google_Drive/CRight_Calibration/Tray7_Calibration'
+cr_t8_calibimage_save_path = '/home/user300/Salk_Project_Folder/Google_Drive/CRight_Calibration/Tray8_Calibration'
+
 
 
 # Processing Paths:
