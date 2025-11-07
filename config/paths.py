@@ -8,12 +8,12 @@ GITHUB_REPO_PATH = '/Users/maxwellrosen/Storage/Salk_Plant_Imaging/eckerlabproj'
 GOOGLE_DRIVE_FOLDER_PATH = '/Users/maxwellrosen/Library/CloudStorage/GoogleDrive-salkimager@gmail.com/My Drive'
 
 # Chamber Left (cl) Paths:
-cl_image_save_path = '/home/user2/Chamber2_Folder/Google_Drive/Temp_CLeft_Holder'
-cl_gdrive_remote_path = 'gdrive:Chamber/Temp_CLeft_Holder'
-cl_temp_image_holder_on_pi = '/home/user2/Chamber2_Folder/Google_Drive/Temp_CLeft_Holder'
-cl_t1_image_save_path =  '/home/user2/Chamber2_Folder/Google_Drive/C2_Calibration/Tray1_Calibration'
-cl_t2_image_save_path = '/home/user2/Chamber2_Folder/Google_Drive/C2_Calibration/Tray2_Calibration'
-cl_t3_image_save_path = '/home/user2/Chamber2_Folder/Google_Drive/C2_Calibration/Tray3_Calibration'
+cl_repo_root = '/home/user2/Salk_Project_Folder/eckerlabproj'
+cl_image_save_path = '/home/user2/Salk_Project_Folder/Google_Drive/CLeft_Holder'
+cl_gdrive_remote_path = 'gdrive:Chamber/CLeft_Holder'
+cl_t1_calibimage_save_path =  '/home/user2/Salk_Project_Folder/Google_Drive/CLeft_Calibration/Tray1_Calibration'
+cl_t2_calibimage_save_path = '/home/user2/Salk_Project_Folder/Google_Drive/CLeft_Calibration/Tray2_Calibration'
+cl_t3_calibimage_save_path = '/home/user2/Salk_Project_Folder/Google_Drive/CLeft_Calibration/Tray3_Calibration'
 
 # Chamber Middle (cm) Paths:
 # TODO (and move over paths tester top part to EVERYTHING)
