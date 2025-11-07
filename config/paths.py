@@ -44,41 +44,42 @@ plant_mapping_csv_path = os.path.join(GITHUB_REPO_PATH, 'On_Laptop', 'Chamber', 
 cl_image_directory = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CLeft_Holder')
 
 # Tray 1 Paths:
-t1_temp_pixel_results = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Temp_JSON_Pixel_Sizes', 'Tray1_Pixels')
+t1_temp_pixel_results = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Temp_JSON_Pixel_Sizes', 'Tray1_Pixels.json')
 t1_scale_values_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Scale_Values', 'Tray1_scale_values.json')
+t1_calibimage_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CLeft_Calibration', 'Tray1_Calibration')
 
 # Tray 2 Paths:
-t2_temp_pixel_results = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Temp_JSON_Pixel_Sizes', 'Tray2_Pixels')
+t2_temp_pixel_results = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Temp_JSON_Pixel_Sizes', 'Tray2_Pixels.json')
 t2_scale_values_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Scale_Values', 'Tray2_scale_values.json')
 
 # Tray 3 Paths:
-t3_temp_pixel_results = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Temp_JSON_Pixel_Sizes', 'Tray3_Pixels')
+t3_temp_pixel_results = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Temp_JSON_Pixel_Sizes', 'Tray3_Pixels.json')
 t3_scale_values_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Scale_Values', 'Tray3_scale_values.json')
 
 # Chamber Middle Paths:
 cm_image_directory = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CMiddle_Holder')
 
 # Tray 4 Paths:
-t4_temp_pixel_results = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Temp_JSON_Pixel_Sizes', 'Tray4_Pixels')
+t4_temp_pixel_results = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Temp_JSON_Pixel_Sizes', 'Tray4_Pixels.json')
 t4_scale_values_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Scale_Values', 'Tray4_scale_values.json')
 
 # Tray 5 Paths:
-t5_temp_pixel_results = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Temp_JSON_Pixel_Sizes', 'Tray5_Pixels')
+t5_temp_pixel_results = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Temp_JSON_Pixel_Sizes', 'Tray5_Pixels.json')
 t5_scale_values_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Scale_Values', 'Tray5_scale_values.json')
 
 # Chamber Right Paths:
 cr_image_directory = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CRight_Holder')
 
 # Tray 6 Paths:
-t6_temp_pixel_results = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Temp_JSON_Pixel_Sizes', 'Tray6_Pixels')
+t6_temp_pixel_results = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Temp_JSON_Pixel_Sizes', 'Tray6_Pixels.json')
 t6_scale_values_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Scale_Values', 'Tray6_scale_values.json')
 
 # Tray 7 Paths:
-t7_temp_pixel_results = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Temp_JSON_Pixel_Sizes', 'Tray7_Pixels')
+t7_temp_pixel_results = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Temp_JSON_Pixel_Sizes', 'Tray7_Pixels.json')
 t7_scale_values_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Scale_Values', 'Tray7_scale_values.json')
 
 # Tray 8 Paths:
-t8_temp_pixel_results = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Temp_JSON_Pixel_Sizes', 'Tray8_Pixels')
+t8_temp_pixel_results = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Temp_JSON_Pixel_Sizes', 'Tray8_Pixels.json')
 t8_scale_values_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Scale_Values', 'Tray8_scale_values.json')
 
 
