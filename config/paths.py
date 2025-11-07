@@ -46,7 +46,7 @@ cl_image_directory = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CLeft_Ho
 # Tray 1 Paths:
 t1_temp_pixel_results = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Temp_JSON_Pixel_Sizes', 'Tray1_Pixels.json')
 t1_scale_values_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Scale_Values', 'Tray1_scale_values.json')
-t1_calibimage_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CLeft_Calibration', 'Tray1_Calibration')
+t1_calibration_image_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CLeft_Calibration', 'Tray1_Calibration')
 
 # Tray 2 Paths:
 t2_temp_pixel_results = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Temp_JSON_Pixel_Sizes', 'Tray2_Pixels.json')
