@@ -10,13 +10,18 @@ GOOGLE_DRIVE_FOLDER_PATH = '/Users/maxwellrosen/Library/CloudStorage/GoogleDrive
 # Chamber Left (cl) Paths:
 cl_repo_root = '/home/user2/Salk_Project_Folder/eckerlabproj'
 cl_image_save_path = '/home/user2/Salk_Project_Folder/Google_Drive/CLeft_Holder'
-cl_gdrive_remote_path = 'gdrive:Chamber/CLeft_Holder'
+cl_gdrive_remote_path = 'gdrive:Chamber'
 cl_t1_calibimage_save_path =  '/home/user2/Salk_Project_Folder/Google_Drive/CLeft_Calibration/Tray1_Calibration'
 cl_t2_calibimage_save_path = '/home/user2/Salk_Project_Folder/Google_Drive/CLeft_Calibration/Tray2_Calibration'
 cl_t3_calibimage_save_path = '/home/user2/Salk_Project_Folder/Google_Drive/CLeft_Calibration/Tray3_Calibration'
 
 # Chamber Middle (cm) Paths:
-# TODO (and move over paths tester top part to EVERYTHING)
+cm_repo_root = '/home/chamberuser1/Salk_Project_Folder/eckerlabproj'
+cm_image_save_path = '/home/chamberuser1/Salk_Project_Folder/Google_Drive/CMiddle_Holder'
+cm_gdrive_remote_path = 'gdrive:Chamber'
+cm_t4_calibimage_save_path =  '/home/chamberuser1/Salk_Project_Folder/Google_Drive/CMiddle_Calibration/Tray4_Calibration'
+cm_t5_calibimage_save_path = '/home/chamberuser1/Salk_Project_Folder/Google_Drive/CMiddle_Calibration/Tray5_Calibration'
+
 
 # Chamber Right (cr) Paths:
 TODO
