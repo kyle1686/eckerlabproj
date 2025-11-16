@@ -19,6 +19,7 @@ def main():
     filename = get_file_name()
     picam2.capture_file(filename)
     # print(f"Photo saved as {filename}") # Uncomment for testing
+    copy_to_drive()
 
 def camera_config():
     picam2 = Picamera2()
@@ -36,6 +37,18 @@ def get_file_name():
 def get_current_time():
     timestamp = datetime.now().strftime("%Y-%m-%d--%H-%M-%S")
     return timestamp
+
+def copy_to_drive():
+    try:
+        subprocess.run(
+            ["rclone", "copy", paths.cm_t4_calibimage_save_path, paths.cm_gdrive_calibration_path],
+            check=True
+        )
+        print(f"Successfully copied {paths.cm_t4_calibimage_save_path} → {paths.cm_gdrive_calibration_path}")
+    except subprocess.CalledProcessError as e:
+        print(f"Upload failed: {e}")
+    except FileNotFoundError:
+        print("rclone not found — make sure it's installed and in PATH.")
 
 if __name__ == "__main__":
     main()

@@ -13,29 +13,34 @@ GOOGLE_DRIVE_FOLDER_PATH = '/Users/maxwellrosen/Library/CloudStorage/GoogleDrive
 # Chamber Left (cl) Paths:
 cl_repo_root = '/home/user2/Salk_Project_Folder/eckerlabproj'
 cl_image_save_path = '/home/user2/Salk_Project_Folder/Google_Drive/CLeft_Holder'
-cl_gdrive_remote_path = 'gdrive:Chamber'
+cl_gdrive_remote_path = 'gdrive:Chamber/CLeft_Holder'
 cl_t1_calibimage_save_path =  '/home/user2/Salk_Project_Folder/Google_Drive/CLeft_Calibration/Tray1_Calibration'
 cl_t2_calibimage_save_path = '/home/user2/Salk_Project_Folder/Google_Drive/CLeft_Calibration/Tray2_Calibration'
 cl_t3_calibimage_save_path = '/home/user2/Salk_Project_Folder/Google_Drive/CLeft_Calibration/Tray3_Calibration'
+cl_gdrive_calibration_path = 'gdrive:Chamber/CLeft_Calibration'
 
 # Chamber Middle (cm) Paths:
 cm_repo_root = '/home/chamberuser1/Salk_Project_Folder/eckerlabproj'
 cm_image_save_path = '/home/chamberuser1/Salk_Project_Folder/Google_Drive/CMiddle_Holder'
-cm_gdrive_remote_path = 'gdrive:Chamber'
+cm_gdrive_remote_path = 'gdrive:Chamber/CMiddle_Holder'
 cm_t4_calibimage_save_path =  '/home/chamberuser1/Salk_Project_Folder/Google_Drive/CMiddle_Calibration/Tray4_Calibration'
 cm_t5_calibimage_save_path = '/home/chamberuser1/Salk_Project_Folder/Google_Drive/CMiddle_Calibration/Tray5_Calibration'
+cm_gdrive_calibration_path = 'gdrive:Chamber/CMiddle_Calibration'
 
 # Chamber Right (cr) Paths:
 cr_repo_root = '/home/user300/Salk_Project_Folder/eckerlabproj'
 cr_image_save_path = '/home/user300/Salk_Project_Folder/Google_Drive/CRight_Holder'
-cr_gdrive_remote_path = 'gdrive:Chamber'
+cr_gdrive_remote_path = 'gdrive:Chamber/CRight_Holder'
 cr_t6_calibimage_save_path =  '/home/user300/Salk_Project_Folder/Google_Drive/CRight_Calibration/Tray6_Calibration'
 cr_t7_calibimage_save_path = '/home/user300/Salk_Project_Folder/Google_Drive/CRight_Calibration/Tray7_Calibration'
 cr_t8_calibimage_save_path = '/home/user300/Salk_Project_Folder/Google_Drive/CRight_Calibration/Tray8_Calibration'
+cr_gdrive_calibration_path = 'gdrive:Chamber/CRight_Calibration'
 
 
 
-# Processing Paths:
+
+## Processing Paths:
+
 analysis_results_csv_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Final_Data', 'chamber_analysis_log.csv')
 plant_mapping_csv_path = os.path.join(GITHUB_REPO_PATH, 'On_Laptop', 'Chamber', 'plant_names.csv')
 
@@ -50,10 +55,12 @@ t1_calibration_image_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'C
 # Tray 2 Paths:
 t2_temp_pixel_results = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Temp_JSON_Pixel_Sizes', 'Tray2_Pixels.json')
 t2_scale_values_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Scale_Values', 'Tray2_scale_values.json')
+t2_calibration_image_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CLeft_Calibration', 'Tray2_Calibration')
 
 # Tray 3 Paths:
 t3_temp_pixel_results = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Temp_JSON_Pixel_Sizes', 'Tray3_Pixels.json')
 t3_scale_values_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Scale_Values', 'Tray3_scale_values.json')
+t3_calibration_image_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CLeft_Calibration', 'Tray3_Calibration')
 
 # Chamber Middle Paths:
 cm_image_directory = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CMiddle_Holder')
@@ -61,10 +68,12 @@ cm_image_directory = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CMiddle_
 # Tray 4 Paths:
 t4_temp_pixel_results = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Temp_JSON_Pixel_Sizes', 'Tray4_Pixels.json')
 t4_scale_values_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Scale_Values', 'Tray4_scale_values.json')
+t4_calibration_image_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CMiddle_Calibration', 'Tray4_Calibration')
 
 # Tray 5 Paths:
 t5_temp_pixel_results = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Temp_JSON_Pixel_Sizes', 'Tray5_Pixels.json')
 t5_scale_values_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Scale_Values', 'Tray5_scale_values.json')
+t5_calibration_image_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CMiddle_Calibration', 'Tray5_Calibration')
 
 # Chamber Right Paths:
 cr_image_directory = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CRight_Holder')
@@ -72,14 +81,17 @@ cr_image_directory = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CRight_H
 # Tray 6 Paths:
 t6_temp_pixel_results = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Temp_JSON_Pixel_Sizes', 'Tray6_Pixels.json')
 t6_scale_values_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Scale_Values', 'Tray6_scale_values.json')
+t6_calibration_image_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CRight_Calibration', 'Tray6_Calibration')
 
 # Tray 7 Paths:
 t7_temp_pixel_results = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Temp_JSON_Pixel_Sizes', 'Tray7_Pixels.json')
 t7_scale_values_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Scale_Values', 'Tray7_scale_values.json')
+t7_calibration_image_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CRight_Calibration', 'Tray7_Calibration')
 
 # Tray 8 Paths:
 t8_temp_pixel_results = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Temp_JSON_Pixel_Sizes', 'Tray8_Pixels.json')
 t8_scale_values_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Scale_Values', 'Tray8_scale_values.json')
+t8_calibration_image_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CRight_Calibration', 'Tray8_Calibration')
 
 
 
