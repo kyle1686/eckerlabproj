@@ -3,7 +3,7 @@ import sys
 cm_repo_root = '/home/chamberuser1/Salk_Project_Folder/eckerlabproj'
 # Add config folder with paths to Python's import search path
 if cm_repo_root not in sys.path:
-    sys.path.insert(0, cl_repo_root)
+    sys.path.insert(0, cm_repo_root)
 
 import config.paths as paths
 
