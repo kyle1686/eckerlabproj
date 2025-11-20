@@ -2,7 +2,7 @@ import sys
 # Change to repository root, so it can find the config folder with the paths inside it
 cr_repo_root = '/home/user300/Salk_Project_Folder/eckerlabproj'
 # Add config folder with paths to Python's import search path
-if cm_repo_root not in sys.path:
+if cr_repo_root not in sys.path:
     sys.path.insert(0, cr_repo_root)
 
 import config.paths as paths
