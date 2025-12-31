@@ -50,16 +50,19 @@ cl_image_directory = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CLeft_Ho
 t1_temp_pixel_results = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Temp_JSON_Pixel_Sizes', 'Tray1_Pixels.json')
 t1_scale_values_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Scale_Values', 'Tray1_scale_values.json')
 t1_calibration_image_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CLeft_Calibration', 'Tray1_Calibration')
+t1_plant_names = os.path.join(GITHUB_REPO_PATH, 'On_Laptop', 'Chamber', 'Tray1', 'plant_names_t1.csv')
 
 # Tray 2 Paths:
 t2_temp_pixel_results = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Temp_JSON_Pixel_Sizes', 'Tray2_Pixels.json')
 t2_scale_values_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Scale_Values', 'Tray2_scale_values.json')
 t2_calibration_image_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CLeft_Calibration', 'Tray2_Calibration')
+t2_plant_names = os.path.join(GITHUB_REPO_PATH, 'On_Laptop', 'Chamber', 'Tray2', 'plant_names_t2.csv')
 
 # Tray 3 Paths:
 t3_temp_pixel_results = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Temp_JSON_Pixel_Sizes', 'Tray3_Pixels.json')
 t3_scale_values_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Scale_Values', 'Tray3_scale_values.json')
 t3_calibration_image_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CLeft_Calibration', 'Tray3_Calibration')
+t3_plant_names = os.path.join(GITHUB_REPO_PATH, 'On_Laptop', 'Chamber', 'Tray3', 'plant_names_t3.csv')
 
 # Chamber Middle Paths:
 cm_image_directory = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CMiddle_Holder')
@@ -68,11 +71,13 @@ cm_image_directory = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CMiddle_
 t4_temp_pixel_results = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Temp_JSON_Pixel_Sizes', 'Tray4_Pixels.json')
 t4_scale_values_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Scale_Values', 'Tray4_scale_values.json')
 t4_calibration_image_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CMiddle_Calibration', 'Tray4_Calibration')
+t4_plant_names = os.path.join(GITHUB_REPO_PATH, 'On_Laptop', 'Chamber', 'Tray4', 'plant_names_t4.csv')
 
 # Tray 5 Paths:
 t5_temp_pixel_results = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Temp_JSON_Pixel_Sizes', 'Tray5_Pixels.json')
 t5_scale_values_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Scale_Values', 'Tray5_scale_values.json')
 t5_calibration_image_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CMiddle_Calibration', 'Tray5_Calibration')
+t5_plant_names = os.path.join(GITHUB_REPO_PATH, 'On_Laptop', 'Chamber', 'Tray5', 'plant_names_t5.csv')
 
 # Chamber Right Paths:
 cr_image_directory = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CRight_Holder')
@@ -81,16 +86,19 @@ cr_image_directory = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CRight_H
 t6_temp_pixel_results = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Temp_JSON_Pixel_Sizes', 'Tray6_Pixels.json')
 t6_scale_values_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Scale_Values', 'Tray6_scale_values.json')
 t6_calibration_image_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CRight_Calibration', 'Tray6_Calibration')
+t6_plant_names = os.path.join(GITHUB_REPO_PATH, 'On_Laptop', 'Chamber', 'Tray6', 'plant_names_t6.csv')
 
 # Tray 7 Paths:
 t7_temp_pixel_results = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Temp_JSON_Pixel_Sizes', 'Tray7_Pixels.json')
 t7_scale_values_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Scale_Values', 'Tray7_scale_values.json')
 t7_calibration_image_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CRight_Calibration', 'Tray7_Calibration')
+t7_plant_names = os.path.join(GITHUB_REPO_PATH, 'On_Laptop', 'Chamber', 'Tray7', 'plant_names_t7.csv')
 
 # Tray 8 Paths:
 t8_temp_pixel_results = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Temp_JSON_Pixel_Sizes', 'Tray8_Pixels.json')
 t8_scale_values_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Scale_Values', 'Tray8_scale_values.json')
 t8_calibration_image_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CRight_Calibration', 'Tray8_Calibration')
+t8_plant_names = os.path.join(GITHUB_REPO_PATH, 'On_Laptop', 'Chamber', 'Tray8', 'plant_names_t8.csv')
 
 
 
