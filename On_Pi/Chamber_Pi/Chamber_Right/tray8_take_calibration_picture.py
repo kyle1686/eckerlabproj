@@ -6,7 +6,7 @@ if cr_repo_root not in sys.path:
     sys.path.insert(0, cr_repo_root)
 
 import config.paths as paths
-
+import subprocess
 from picamera2 import Picamera2, Preview
 from datetime import datetime
 import time
