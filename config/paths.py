@@ -15,8 +15,10 @@ plant_mapping_csv_path = os.path.join(GITHUB_REPO_PATH, 'On_Laptop', 'Chamber', 
 
 # Chamber Left Paths:
 cl_image_directory = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CLeft_Holder')
-cl_fisheye_calibration_directory = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CLeft_Calibration', 'Fisheye_Calibration')
-cl_gdrive_fisheye_calibration_path = 'gdrive:Chamber/CLeft_Calibration/Fisheye_Calibration'
+cl_checkerboard_images_onlaptop = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CLeft_Calibration', 'Checkerboard_Images')
+cl_gdrive_checkerboard_images = 'gdrive:Chamber/CLeft_Calibration/Checkerboard_Images'
+cl_checkerboard_calibration_onpi = '/home/user2/Salk_Project_Folder/Google_Drive/CLeft_Calibration/Checkerboard_Images'
+cl_fisheye_correction_matrices = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CLeft_Calibration', 'Fisheye_Calibration_Matrices')
 
 # Tray 1 Paths:
 t1_github = os.path.join(GITHUB_REPO_PATH, 'On_Laptop', 'Chamber', 'Tray1')
@@ -122,7 +124,6 @@ cl_gdrive_remote_path = 'gdrive:Chamber/CLeft_Holder'
 cl_t1_calibimage_save_path =  '/home/user2/Salk_Project_Folder/Google_Drive/CLeft_Calibration/Tray1_Calibration'
 cl_t2_calibimage_save_path = '/home/user2/Salk_Project_Folder/Google_Drive/CLeft_Calibration/Tray2_Calibration'
 cl_t3_calibimage_save_path = '/home/user2/Salk_Project_Folder/Google_Drive/CLeft_Calibration/Tray3_Calibration'
-cl_fisheye_calibimage_save_path = '/home/user2/Salk_Project_Folder/Google_Drive/CLeft_Calibration/Fisheye_Calibration'
 cl_gdrive_calibration_path = 'gdrive:Chamber/CLeft_Calibration'
 
 # Chamber Middle (cm) Paths:

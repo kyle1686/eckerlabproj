@@ -29,9 +29,9 @@ def camera_config():
     return picam2
 
 def get_file_name():
-    save_path = paths.cl_fisheye_calibration_directory
+    save_path = paths.cl_checkerboard_calibration_onpi
     os.makedirs(save_path, exist_ok=True) # Ensure directory exists
-    filename = os.path.join(save_path, f"ChamberLeft_fisheye_image_{get_current_time()}.jpg")
+    filename = os.path.join(save_path, f"ChamberLeft_checkerboard_{get_current_time()}.jpg")
     return filename
 
 def get_current_time():
@@ -41,10 +41,10 @@ def get_current_time():
 def copy_to_drive():
     try:
         subprocess.run(
-            ["rclone", "copy", paths.cl_fisheye_calibimage_save_path, paths.cl_gdrive_fisheye_calibration_path],
+            ["rclone", "copy", paths.cl_checkerboard_calibration_onpi, paths.cl_gdrive_checkerboard_images],
             check=True
         )
-        print(f"Successfully copied {paths.cl_fisheye_calibimage_save_path} → {paths.cl_gdrive_fisheye_calibration_path}")
+        print(f"Successfully copied {paths.cl_checkerboard_calibration_onpi} → {paths.cl_gdrive_checkerboard_images}")
     except subprocess.CalledProcessError as e:
         print(f"Upload failed: {e}")
     except FileNotFoundError:
