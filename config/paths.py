@@ -49,6 +49,10 @@ t3_analysis_results = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Final_D
 
 # Chamber Middle Paths:
 cm_image_directory = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CMiddle_Holder')
+cm_checkerboard_images_onlaptop = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CMiddle_Calibration', 'Checkerboard_Images')
+cm_gdrive_checkerboard_images = 'gdrive:Chamber/CMiddle_Calibration/Checkerboard_Images'
+cm_checkerboard_calibration_onpi = '/home/chamberuser1/Salk_Project_Folder/Google_Drive/CMiddle_Calibration/Checkerboard_Images'
+cm_fisheye_correction_matrices = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CMiddle _Calibration', 'Fisheye_Calibration_Matrices')
 
 # Tray 4 Paths:
 t4_github = os.path.join(GITHUB_REPO_PATH, 'On_Laptop', 'Chamber', 'Tray4')
@@ -70,6 +74,10 @@ t5_analysis_results = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Final_D
 
 # Chamber Right Paths:
 cr_image_directory = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CRight_Holder')
+cr_checkerboard_images_onlaptop = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CRight_Calibration', 'Checkerboard_Images')
+cr_gdrive_checkerboard_images = 'gdrive:Chamber/CRight_Calibration/Checkerboard_Images'
+cr_checkerboard_calibration_onpi = '/home/user300/Salk_Project_Folder/Google_Drive/CRight_Calibration/Checkerboard_Images'
+cr_fisheye_correction_matrices = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CRight _Calibration', 'Fisheye_Calibration_Matrices')
 
 # Tray 6 Paths:
 t6_github = os.path.join(GITHUB_REPO_PATH, 'On_Laptop', 'Chamber', 'Tray6')

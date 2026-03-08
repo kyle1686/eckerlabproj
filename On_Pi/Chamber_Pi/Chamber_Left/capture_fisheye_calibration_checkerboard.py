@@ -14,12 +14,23 @@ import os
 
 
 def main():
-    picam2 = camera_config()
-    time.sleep(2)  # Allow the camera to adjust
-    filename = get_file_name()
-    picam2.capture_file(filename)
-    # print(f"Photo saved as {filename}") # Uncomment for testing
+    while True:
+        picam2 = camera_config()
+        time.sleep(2)  # Allow the camera to adjust
+        filename = get_file_name()
+        picam2.capture_file(filename)
+        print(f"Photo saved as {filename}.\n")
+        again = input("Do you want to capture another image (y), copy to Google Drive and rerun (g), or end with copying to Google Drive (anything)?: ")
+        if again.lower() == "y":
+            continue
+        if again.lower() == "g":
+             copy_to_drive()
+             # print(f"Photo saved as {filename}")
+             continue
+        else:
+            break
     copy_to_drive()
+    print("Images captured and uploaded to the Google Drive folder successfully.")
 
 def camera_config():
     picam2 = Picamera2()
