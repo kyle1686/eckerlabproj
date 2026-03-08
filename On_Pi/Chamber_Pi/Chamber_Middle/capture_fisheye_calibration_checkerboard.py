@@ -14,8 +14,8 @@ import os
 
 
 def main():
+    picam2 = camera_config()
     while True:
-        picam2 = camera_config()
         time.sleep(2)  # Allow the camera to adjust
         filename = get_file_name()
         picam2.capture_file(filename)
@@ -29,6 +29,7 @@ def main():
              continue
         else:
             break
+    picam2.stop()
     copy_to_drive()
     print("Images captured and uploaded to the Google Drive folder successfully.")
 
