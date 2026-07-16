@@ -21,30 +21,30 @@ cl_checkerboard_calibration_onpi = '/home/user2/Salk_Project_Folder/Google_Drive
 cl_fisheye_correction_matrices = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CLeft_Calibration', 'Fisheye_Calibration_Matrices')
 
 # Tray 1 Paths:
-t1_github = os.path.join(GITHUB_REPO_PATH, 'On_Laptop', 'Chamber', 'Tray1')
+t1_github = os.path.join(GITHUB_REPO_PATH, 'On_Laptop', 'Chamber', 'Current Experiment', 'Tray1')
 t1_temp_pixel_results = os.path.join(t1_github, 'Tray1_Plant_Pixels.json')
 t1_temp_calibration_pixel_results = os.path.join(t1_github, 'Pixels_to_mm_T1', 'Tray1_Pixels_in_squares.json')
 t1_scale_values_path = os.path.join(t1_github, 'Pixels_to_mm_T1', 'Tray1_scale_values.json')
 t1_calibration_image_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CLeft_Calibration', 'Tray1_Calibration')
-t1_plant_names = os.path.join(GITHUB_REPO_PATH, 'On_Laptop', 'Chamber', 'Tray1', 'plant_names_t1.csv')
+t1_plant_names = os.path.join(GITHUB_REPO_PATH, 'On_Laptop', 'Chamber', 'Current Experiment', 'Tray1', 'plant_names_t1.csv')
 t1_analysis_results = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Final_Data', 'tray1_analysis_log.csv')
 
 # Tray 2 Paths:
-t2_github = os.path.join(GITHUB_REPO_PATH, 'On_Laptop', 'Chamber', 'Tray2')
+t2_github = os.path.join(GITHUB_REPO_PATH, 'On_Laptop', 'Chamber', 'Current Experiment', 'Tray2')
 t2_temp_pixel_results = os.path.join(t2_github, 'Tray2_Plant_Pixels.json')
 t2_temp_calibration_pixel_results = os.path.join(t2_github, 'Pixels_to_mm_T2', 'Tray2_Pixels_in_squares.json')
 t2_scale_values_path = os.path.join(t2_github, 'Pixels_to_mm_T2', 'Tray2_scale_values.json')
 t2_calibration_image_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CLeft_Calibration', 'Tray2_Calibration')
-t2_plant_names = os.path.join(GITHUB_REPO_PATH, 'On_Laptop', 'Chamber', 'Tray2', 'plant_names_t2.csv')
+t2_plant_names = os.path.join(GITHUB_REPO_PATH, 'On_Laptop', 'Chamber', 'Current Experiment', 'Tray2', 'plant_names_t2.csv')
 t2_analysis_results = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Final_Data', 'tray2_analysis_log.csv')
 
 # Tray 3 Paths:
-t3_github = os.path.join(GITHUB_REPO_PATH, 'On_Laptop', 'Chamber', 'Tray3')
+t3_github = os.path.join(GITHUB_REPO_PATH, 'On_Laptop', 'Chamber', 'Current Experiment', 'Tray3')
 t3_temp_pixel_results = os.path.join(t3_github, 'Tray3_Plant_Pixels.json')
 t3_temp_calibration_pixel_results = os.path.join(t3_github, 'Pixels_to_mm_T3', 'Tray3_Pixels_in_squares.json')
 t3_scale_values_path = os.path.join(t3_github, 'Pixels_to_mm_T3', 'Tray3_scale_values.json')
 t3_calibration_image_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CLeft_Calibration', 'Tray3_Calibration')
-t3_plant_names = os.path.join(GITHUB_REPO_PATH, 'On_Laptop', 'Chamber', 'Tray3', 'plant_names_t3.csv')
+t3_plant_names = os.path.join(GITHUB_REPO_PATH, 'On_Laptop', 'Chamber', 'Current Experiment', 'Tray3', 'plant_names_t3.csv')
 t3_analysis_results = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Final_Data', 'tray3_analysis_log.csv')
 
 # Chamber Middle Paths:
@@ -55,21 +55,21 @@ cm_checkerboard_calibration_onpi = '/home/chamberuser1/Salk_Project_Folder/Googl
 cm_fisheye_correction_matrices = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CMiddle_Calibration', 'Fisheye_Calibration_Matrices')
 
 # Tray 4 Paths:
-t4_github = os.path.join(GITHUB_REPO_PATH, 'On_Laptop', 'Chamber', 'Tray4')
+t4_github = os.path.join(GITHUB_REPO_PATH, 'On_Laptop', 'Chamber', 'Current Experiment', 'Tray4')
 t4_temp_pixel_results = os.path.join(t4_github, 'Tray4_Plant_Pixels.json')
 t4_temp_calibration_pixel_results = os.path.join(t4_github, 'Pixels_to_mm_T4', 'Tray4_Pixels_in_squares.json')
 t4_scale_values_path = os.path.join(t4_github, 'Pixels_to_mm_T4', 'Tray4_scale_values.json')
 t4_calibration_image_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CMiddle_Calibration', 'Tray4_Calibration')
-t4_plant_names = os.path.join(GITHUB_REPO_PATH, 'On_Laptop', 'Chamber', 'Tray4', 'plant_names_t4.csv')
+t4_plant_names = os.path.join(GITHUB_REPO_PATH, 'On_Laptop', 'Chamber', 'Current Experiment', 'Tray4', 'plant_names_t4.csv')
 t4_analysis_results = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Final_Data', 'tray4_analysis_log.csv')
 
 # Tray 5 Paths:
-t5_github = os.path.join(GITHUB_REPO_PATH, 'On_Laptop', 'Chamber', 'Tray5')
+t5_github = os.path.join(GITHUB_REPO_PATH, 'On_Laptop', 'Chamber', 'Current Experiment', 'Tray5')
 t5_temp_pixel_results = os.path.join(t5_github, 'Tray5_Plant_Pixels.json')
 t5_temp_calibration_pixel_results = os.path.join(t5_github, 'Pixels_to_mm_T5', 'Tray5_Pixels_in_squares.json')
 t5_scale_values_path = os.path.join(t5_github, 'Pixels_to_mm_T5', 'Tray5_scale_values.json')
 t5_calibration_image_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CMiddle_Calibration', 'Tray5_Calibration')
-t5_plant_names = os.path.join(GITHUB_REPO_PATH, 'On_Laptop', 'Chamber', 'Tray5', 'plant_names_t5.csv')
+t5_plant_names = os.path.join(GITHUB_REPO_PATH, 'On_Laptop', 'Chamber', 'Current Experiment', 'Tray5', 'plant_names_t5.csv')
 t5_analysis_results = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Final_Data', 'tray5_analysis_log.csv')
 
 # Chamber Right Paths:
@@ -80,30 +80,30 @@ cr_checkerboard_calibration_onpi = '/home/user300/Salk_Project_Folder/Google_Dri
 cr_fisheye_correction_matrices = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CRight_Calibration', 'Fisheye_Calibration_Matrices')
 
 # Tray 6 Paths:
-t6_github = os.path.join(GITHUB_REPO_PATH, 'On_Laptop', 'Chamber', 'Tray6')
+t6_github = os.path.join(GITHUB_REPO_PATH, 'On_Laptop', 'Chamber', 'Current Experiment', 'Tray6')
 t6_temp_pixel_results = os.path.join(t6_github, 'Tray6_Plant_Pixels.json')
 t6_temp_calibration_pixel_results = os.path.join(t6_github, 'Pixels_to_mm_T6', 'Tray6_Pixels_in_squares.json')
 t6_scale_values_path = os.path.join(t6_github, 'Pixels_to_mm_T6', 'Tray6_scale_values.json')
 t6_calibration_image_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CRight_Calibration', 'Tray6_Calibration')
-t6_plant_names = os.path.join(GITHUB_REPO_PATH, 'On_Laptop', 'Chamber', 'Tray6', 'plant_names_t6.csv')
+t6_plant_names = os.path.join(GITHUB_REPO_PATH, 'On_Laptop', 'Chamber', 'Current Experiment', 'Tray6', 'plant_names_t6.csv')
 t6_analysis_results = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Final_Data', 'tray6_analysis_log.csv')
 
 # Tray 7 Paths:
-t7_github = os.path.join(GITHUB_REPO_PATH, 'On_Laptop', 'Chamber', 'Tray7')
+t7_github = os.path.join(GITHUB_REPO_PATH, 'On_Laptop', 'Chamber', 'Current Experiment', 'Tray7')
 t7_temp_pixel_results = os.path.join(t7_github, 'Tray7_Plant_Pixels.json')
 t7_temp_calibration_pixel_results = os.path.join(t7_github, 'Pixels_to_mm_T7', 'Tray7_Pixels_in_squares.json')
 t7_scale_values_path = os.path.join(t7_github, 'Pixels_to_mm_T7', 'Tray7_scale_values.json')
 t7_calibration_image_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CRight_Calibration', 'Tray7_Calibration')
-t7_plant_names = os.path.join(GITHUB_REPO_PATH, 'On_Laptop', 'Chamber', 'Tray7', 'plant_names_t7.csv')
+t7_plant_names = os.path.join(GITHUB_REPO_PATH, 'On_Laptop', 'Chamber', 'Current Experiment', 'Tray7', 'plant_names_t7.csv')
 t7_analysis_results = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Final_Data', 'tray7_analysis_log.csv')
 
 # Tray 8 Paths:
-t8_github = os.path.join(GITHUB_REPO_PATH, 'On_Laptop', 'Chamber', 'Tray8')
+t8_github = os.path.join(GITHUB_REPO_PATH, 'On_Laptop', 'Chamber', 'Current Experiment', 'Tray8')
 t8_temp_pixel_results = os.path.join(t8_github, 'Tray8_Plant_Pixels.json')
 t8_temp_calibration_pixel_results = os.path.join(t8_github, 'Pixels_to_mm_T8', 'Tray8_Pixels_in_squares.json')
 t8_scale_values_path = os.path.join(t8_github, 'Pixels_to_mm_T8', 'Tray8_scale_values.json')
 t8_calibration_image_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CRight_Calibration', 'Tray8_Calibration')
-t8_plant_names = os.path.join(GITHUB_REPO_PATH, 'On_Laptop', 'Chamber', 'Tray8', 'plant_names_t8.csv')
+t8_plant_names = os.path.join(GITHUB_REPO_PATH, 'On_Laptop', 'Chamber', 'Current Experiment', 'Tray8', 'plant_names_t8.csv')
 t8_analysis_results = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Final_Data', 'tray8_analysis_log.csv')
 
 
