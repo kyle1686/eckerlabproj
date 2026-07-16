@@ -3,11 +3,12 @@ import os
 # Paths to base directories:
 
 
-# Personal laptop changes these:
-# To Github Repository:
-GITHUB_REPO_PATH = '/Users/maxwellrosen/Storage/Salk_Plant_Imaging/eckerlabproj'
-# To Google Drive folder:
-GOOGLE_DRIVE_FOLDER_PATH = '/Users/maxwellrosen/Library/CloudStorage/GoogleDrive-salkimager@gmail.com/My Drive'
+# Set these two paths on each machine -- they are the only per-machine config.
+# Everything else in this file is derived from them.
+# Lab computer's path to the cloned repo:
+GITHUB_REPO_PATH = '/Users/user/Storage/Salk_Plant_Imaging/eckerlabproj'
+# Lab computer's path to the synced Google Drive folder:
+GOOGLE_DRIVE_FOLDER_PATH = '/Users/user/Library/CloudStorage/GoogleDrive-salkimager@gmail.com/My Drive'
 
 
 analysis_results_csv_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Final_Data', 'chamber_analysis_log.csv')
@@ -114,15 +115,15 @@ PLANT_NAMES_PATH = "./On_Laptop/Chamber_Jupyter_Labs/plant_names.csv"
 
 # for below, may need to modify / add a directory on the github for data eventually
 
-ANALYSIS_RESULTS_CSV_PATH = "/Users/maxwellrosen/Library/CloudStorage/GoogleDrive-salkimager@gmail.com/My Drive/Chamber/Final_Data/chamber_analysis_log.csv"
+ANALYSIS_RESULTS_CSV_PATH = "/Users/user/Library/CloudStorage/GoogleDrive-salkimager@gmail.com/My Drive/Chamber/Final_Data/chamber_analysis_log.csv"
 
 # SHORT_TERM_DIR is also known as IMAGE_DIR
-SHORT_TERM_DIR1 = '/Users/maxwellrosen/Library/CloudStorage/GoogleDrive-salkimager@gmail.com/My Drive/Chamber/Temp_C1_Holder'
-SHORT_TERM_DIR2 = '/Users/maxwellrosen/Library/CloudStorage/GoogleDrive-salkimager@gmail.com/My Drive/Chamber/Temp_C2_Holder'
-LONG_TERM_DIR = '/Users/maxwellrosen/Library/CloudStorage/GoogleDrive-salkimager@gmail.com/My Drive/Chamber/Longterm_Image_Storage'
+SHORT_TERM_DIR1 = '/Users/user/Library/CloudStorage/GoogleDrive-salkimager@gmail.com/My Drive/Chamber/Temp_C1_Holder'
+SHORT_TERM_DIR2 = '/Users/user/Library/CloudStorage/GoogleDrive-salkimager@gmail.com/My Drive/Chamber/Temp_C2_Holder'
+LONG_TERM_DIR = '/Users/user/Library/CloudStorage/GoogleDrive-salkimager@gmail.com/My Drive/Chamber/Longterm_Image_Storage'
 
-CHAMBER_BASE_DIR = '/Users/maxwellrosen/Library/CloudStorage/GoogleDrive-salkimager@gmail.com/My Drive/Chamber'
-DESKTOP_BASE_DIR = '/Users/maxwellrosen/Library/CloudStorage/GoogleDrive-salkimager@gmail.com/My Drive/Desktop'
+CHAMBER_BASE_DIR = '/Users/user/Library/CloudStorage/GoogleDrive-salkimager@gmail.com/My Drive/Chamber'
+DESKTOP_BASE_DIR = '/Users/user/Library/CloudStorage/GoogleDrive-salkimager@gmail.com/My Drive/Desktop'
 
 ## Maybe usless for now?
 # Chamber Left (cl) Paths:

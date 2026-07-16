@@ -25,13 +25,13 @@ def process_single_chamber2_image(filename, BASE_DIR, image_dir):
     image_path = os.path.join(image_dir, image_name)
     
     # Change to Chamber folder: this is where the temporary data on pixel number in plants is saved
-    temp_chamber_image_results = "/Users/maxwellrosen/Storage/Salk_Plant_Imaging/eckerlabproj/On_Laptop/Chamber_Jupyter_Labs/Chamber2/temp_chamber_image_results.json" #CHANGE TO LOCAL GITHUB REPO
+    temp_chamber_image_results = "/Users/user/Storage/Salk_Plant_Imaging/eckerlabproj/On_Laptop/Chamber_Jupyter_Labs/Chamber2/temp_chamber_image_results.json" #CHANGE TO LOCAL GITHUB REPO
     # Change to location where data from this run is saved
-    analysis_results_csv_path = "/Users/maxwellrosen/Library/CloudStorage/GoogleDrive-salkimager@gmail.com/My Drive/Chamber/Final_Data/chamber_analysis_log.csv"
+    analysis_results_csv_path = "/Users/user/Library/CloudStorage/GoogleDrive-salkimager@gmail.com/My Drive/Chamber/Final_Data/chamber_analysis_log.csv"
     # Change to location where scale_values is saved
-    scale_values_path = "/Users/maxwellrosen/Storage/Salk_Plant_Imaging/eckerlabproj/On_Laptop/Chamber_Jupyter_Labs/Chamber2/Pixels_to_mm_C2/scale_values.json" #CHANGE TO LOCAL GITHUB REPO
+    scale_values_path = "/Users/user/Storage/Salk_Plant_Imaging/eckerlabproj/On_Laptop/Chamber_Jupyter_Labs/Chamber2/Pixels_to_mm_C2/scale_values.json" #CHANGE TO LOCAL GITHUB REPO
     # Change to location where plant_names.csv is saved
-    plant_names_path = "/Users/maxwellrosen/Storage/Salk_Plant_Imaging/eckerlabproj/On_Laptop/Chamber_Jupyter_Labs/plant_names.csv"
+    plant_names_path = "/Users/user/Storage/Salk_Plant_Imaging/eckerlabproj/On_Laptop/Chamber_Jupyter_Labs/plant_names.csv"
 
     
     # Splitting filename to get the time
@@ -144,8 +144,8 @@ def process_single_chamber2_image(filename, BASE_DIR, image_dir):
     
     
     # Moves image to longterm storage
-    short_term_dir = '/Users/maxwellrosen/Library/CloudStorage/GoogleDrive-salkimager@gmail.com/My Drive/Chamber/Temp_C2_Holder'
-    long_term_dir = '/Users/maxwellrosen/Library/CloudStorage/GoogleDrive-salkimager@gmail.com/My Drive/Chamber/Longterm_Image_Storage'
+    short_term_dir = '/Users/user/Library/CloudStorage/GoogleDrive-salkimager@gmail.com/My Drive/Chamber/Temp_C2_Holder'
+    long_term_dir = '/Users/user/Library/CloudStorage/GoogleDrive-salkimager@gmail.com/My Drive/Chamber/Longterm_Image_Storage'
     filename = image_name
     
     # Full paths
@@ -160,8 +160,8 @@ def process_single_chamber2_image(filename, BASE_DIR, image_dir):
 
 
 def process_all_chamber2_images():
-    BASE_DIR = '/Users/maxwellrosen/Library/CloudStorage/GoogleDrive-salkimager@gmail.com/My Drive/Chamber'
-    image_dir = '/Users/maxwellrosen/Library/CloudStorage/GoogleDrive-salkimager@gmail.com/My Drive/Chamber/Temp_C2_Holder'
+    BASE_DIR = '/Users/user/Library/CloudStorage/GoogleDrive-salkimager@gmail.com/My Drive/Chamber'
+    image_dir = '/Users/user/Library/CloudStorage/GoogleDrive-salkimager@gmail.com/My Drive/Chamber/Temp_C2_Holder'
     files = [f for f in os.listdir(image_dir) if not f.startswith(".")]
     if len(files) == 0:
         raise FileNotFoundError(f"No image files found in {image_dir}.")

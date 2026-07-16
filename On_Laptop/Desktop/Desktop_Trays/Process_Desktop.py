@@ -238,7 +238,7 @@ def process_single_desktop_image(filename, BASE_DIR):
     # plt.close('all')
 
 def process_all_desktop_images():
-    BASE_DIR = '/Users/maxwellrosen/Library/CloudStorage/GoogleDrive-salkimager@gmail.com/My Drive/Desktop'
+    BASE_DIR = '/Users/user/Library/CloudStorage/GoogleDrive-salkimager@gmail.com/My Drive/Desktop'
     image_dir = os.path.join(BASE_DIR, "Image_Holder", "Temp_Staging_Area")
     files = [f for f in os.listdir(image_dir) if not f.startswith(".")]
     if len(files) == 0:
