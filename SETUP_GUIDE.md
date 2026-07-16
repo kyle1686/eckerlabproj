@@ -4,10 +4,9 @@ A beginner-friendly guide to building the imaging system from scratch: setting u
 a Raspberry Pi, connecting a camera, getting the code running, automating capture,
 and syncing images to Google Drive.
 
-> **Illustrated version:** an illustrated copy of this guide with screenshots
-> (Raspberry Pi Imager, wiring photos, etc.) lives in the lab Google Drive as
-> "Steps for setting up Phenotyping System." Points below that say *"see the
-> illustrated guide"* refer to those screenshots.
+> Screenshots and photos are included inline throughout. They show the Raspberry Pi
+> Imager screens and the camera wiring on the hardware we used (a Raspberry Pi 3 with
+> an ArduCam); your exact screens may differ slightly by model and software version.
 
 ---
 
@@ -31,23 +30,52 @@ lives on the microSD card (32 GB or more; the Pi supports up to 2 TB). Write it 
 the [Raspberry Pi Imager](https://www.raspberrypi.com/software/):
 
 1. Install and open Raspberry Pi Imager on your separate computer (not the Pi).
+
+   ![Raspberry Pi Imager main screen](images/setup_guide/1.png)
+
 2. Choose your **Device** (we use Raspberry Pi 3).
-3. Choose your **Operating System** (the recommended version at the top of the list).
-4. Choose the correct **Storage** device. If several are connected, identify it by
-   size, or unplug the others until only the target card is listed.
+
+   ![Device set to Raspberry Pi 3](images/setup_guide/2.png)
+
+3. Choose the correct **Storage** device. If several are connected, identify it by
+   size, or unplug the others until only the target card is listed. (You can pick the
+   OS and storage in either order.)
+
+   ![Selecting the storage device](images/setup_guide/3.png)
+
+4. Choose your **Operating System** — the recommended version at the top of the list.
+
+   ![Raspberry Pi OS (64-bit) selected](images/setup_guide/4.png)
+
 5. When prompted to configure the OS, click **Edit Settings** (recommended; otherwise
-   it asks on first boot). Under **General**, set and write down:
+   it asks on first boot).
+
+   ![Apply OS customisation settings prompt](images/setup_guide/5.png)
+
+   Under **General**, set and write down:
    - **Hostname** — something "raspberrypi"-related.
    - **Username and password** for the admin account.
    - **Wireless LAN** — the SSID and password of the Wi-Fi you're on (the Pi and your
      computer being on the same network is how you first reach it).
    - **Wireless LAN country**, and **locale** (time zone, keyboard).
+
 6. Under **Services**, enable **SSH** and use **password authentication** (public-key
    auth works and is more secure, but is more involved to share among lab members).
+
+   ![Services tab with SSH and password authentication enabled](images/setup_guide/6.png)
+
 7. **Options** can be left alone. Click **Save**, then **Yes** to apply to the card,
    then **Yes** to confirm (this erases everything on the card).
-8. Grant any read/write permission prompts. The Imager writes, then verifies (about 7
-   minutes for us). When "Write Successful" appears, eject the card.
+
+   ![Warning that existing data on the card will be erased](images/setup_guide/7.png)
+
+8. The Imager writes, then verifies (about 7 minutes for us).
+
+   ![Writing progress bar](images/setup_guide/8.png)
+
+9. When **Write Successful** appears, eject the card.
+
+   ![Write Successful dialog](images/setup_guide/9.png)
 
 ---
 
@@ -95,8 +123,9 @@ the [Raspberry Pi Imager](https://www.raspberrypi.com/software/):
 ## 3. Setting up the camera
 
 1. Unpack the camera (we use ArduCams) and remove the protective plastic.
-2. With the Pi powered off, insert the ribbon into the connector labeled **CAMERA**
-   (see the illustrated guide for the photo).
+2. With the Pi powered off, insert the ribbon into the connector labeled **CAMERA**.
+
+   ![ArduCam ribbon connected to the Raspberry Pi's CAMERA port](images/setup_guide/10.jpg)
 3. Test that the Pi sees the camera:
 
    ```
