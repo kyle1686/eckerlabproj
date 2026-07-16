@@ -10,7 +10,7 @@ The repository holds **code and configuration only**. Raw images live in Google 
 
 ```mermaid
 flowchart TD
-    A["Raspberry Pi cameras<br/>(Left / Middle / Right chamber)"] -->|crontab, every 20 min| B["chamber_takepicture.py<br/>timestamped JPGs"]
+    A["Raspberry Pi cameras<br/>(Left / Middle / Right chamber)"] -->|crontab, every 2 hours| B["chamber_takepicture.py<br/>timestamped JPGs"]
     B -->|rclone sync| C["Google Drive<br/>CLeft/CMiddle/CRight Holders"]
     C --> D["Process_TrayN.ipynb<br/>fisheye + color correction, crop, mask"]
     E["Calibrate_Checkerboard.ipynb<br/>fisheye matrices"] --> D
@@ -75,10 +75,10 @@ The notebooks are built for JupyterLab and use interactive Matplotlib (`%matplot
 
 ### 1. Capture (on the Raspberry Pi)
 
-Each chamber camera runs on its own Pi. Routine capture is handled by `chamber_takepicture.py`, scheduled with cron. For example, every 20 minutes between 10 AM and 6 PM:
+Each chamber camera runs on its own Pi. Routine capture is handled by `chamber_takepicture.py`, scheduled with cron. Images are taken about every 2 hours during the light period (9 AM to 5 PM). For example:
 
 ```
-*/20 10-18 * * * /usr/bin/python3 /home/user/eckerlabproj/On_Pi/Chamber_Pi/Chamber_Left/chamber_takepicture.py
+0 9-17/2 * * * /usr/bin/python3 /home/user/eckerlabproj/On_Pi/Chamber_Pi/Chamber_Left/chamber_takepicture.py
 ```
 
 See `crontab_controls.md` for a full walkthrough of editing and checking cron jobs. Images are saved with timestamped names (`ChamberLeft_image_YYYY-MM-DD--HH-MM.jpg`) and synced to Google Drive with rclone.
