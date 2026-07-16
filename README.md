@@ -49,7 +49,7 @@ and the camera wiring.
 | `On_Laptop/Chamber/` | Main analysis workspace (runs on the lab computer). |
 | `On_Laptop/Chamber/Camera_{Left,Middle,Right}_Calibration/` | `Calibrate_Checkerboard.ipynb` — computes fisheye correction matrices for each camera. |
 | `On_Laptop/Chamber/Current Experiment/Tray1…Tray8/` | Per-tray processing. Each tray has `Process_TrayN.ipynb`, a `Pixels_to_mm_TN/` calibration notebook, and `plant_names_tN.csv`. |
-| `On_Laptop/Chamber/Process_all_Chamber*.py`, `Process_Whole_Chamber.py` | Batch drivers that process every tray in one run. |
+| `On_Laptop/Chamber/legacy/` | A barebones batch-processing template (adapt-me) plus notes; not part of the current workflow. |
 | `On_Laptop/Chamber/Individual_Plant_Video_Maker.ipynb` | Builds per-plant timelapse MP4s from a run of images. |
 | `On_Laptop/Desktop/` | Processing for the desktop imaging setup (parallel to the chamber workflow). |
 | `crontab_controls.md` | Guide to scheduling automatic captures on the Pi with cron. |
@@ -112,7 +112,7 @@ Open `Current Experiment/TrayN/Process_TrayN.ipynb` and run the cells top to bot
 5. Looks up genotype names from `plant_names_tN.csv` and appends a row per plant to that tray's analysis CSV in Google Drive (`Chamber/Final_Data/trayN_analysis_log.csv`).
 6. Moves the processed image into a holder folder so it is not re-counted.
 
-To process every tray in one shot, run `Process_Whole_Chamber.py`. Run the scale calibration first, or the mm² conversion will be missing.
+**Batch processing (optional).** The per-tray notebooks are the day-to-day workflow because they let you re-crop and re-tune each tray. If imaging conditions are stable across a run — the tray doesn't move, plants stay green and don't touch, and the crop/ROIs don't need adjusting between images — you can instead process a whole folder in one command. `On_Laptop/Chamber/legacy/batch_process_template.py` is a barebones starting point for that: fill in its `EDIT ME` paths and ROI coordinates and adapt it to your layout. Run the scale calibration first, or the mm² conversion will be missing.
 
 ### 4. Make timelapse videos
 

@@ -12,7 +12,6 @@ GOOGLE_DRIVE_FOLDER_PATH = '/Users/user/Library/CloudStorage/GoogleDrive-salkima
 
 
 analysis_results_csv_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Final_Data', 'chamber_analysis_log.csv')
-plant_mapping_csv_path = os.path.join(GITHUB_REPO_PATH, 'On_Laptop', 'Chamber', 'plant_names.csv')
 
 # Chamber Left Paths:
 cl_image_directory = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'CLeft_Holder')
@@ -107,15 +106,6 @@ t8_calibration_image_path = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'C
 t8_plant_names = os.path.join(GITHUB_REPO_PATH, 'On_Laptop', 'Chamber', 'Current Experiment', 'Tray8', 'plant_names_t8.csv')
 t8_analysis_results = os.path.join(GOOGLE_DRIVE_FOLDER_PATH, 'Chamber', 'Final_Data', 'tray8_analysis_log.csv')
 
-
-TEMP_CHAMBER_IMAGE_RESULTS = "./On_Laptop/Chamber_Jupyter_Labs/Chamber1/temp_chamber_image_results.json"
-
-SCALE_VALUE_PATH = "./On_Laptop/Chamber_Jupyter_Labs/Chamber1/Pixels_to_mm_C1/scale_values.json"
-PLANT_NAMES_PATH = "./On_Laptop/Chamber_Jupyter_Labs/plant_names.csv"
-
-# for below, may need to modify / add a directory on the github for data eventually
-
-ANALYSIS_RESULTS_CSV_PATH = "/Users/user/Library/CloudStorage/GoogleDrive-salkimager@gmail.com/My Drive/Chamber/Final_Data/chamber_analysis_log.csv"
 
 # SHORT_TERM_DIR is also known as IMAGE_DIR
 SHORT_TERM_DIR1 = '/Users/user/Library/CloudStorage/GoogleDrive-salkimager@gmail.com/My Drive/Chamber/Temp_C1_Holder'
