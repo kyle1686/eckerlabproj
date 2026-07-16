@@ -87,8 +87,8 @@ See `crontab_controls.md` for a full walkthrough of editing and checking cron jo
 
 Before processing a new experiment, run the two calibration steps:
 
-- **Fisheye correction** — `Camera_{Left,Middle,Right}_Calibration/Calibrate_Checkerboard.ipynb` uses checkerboard photos to compute distortion matrices (`mtx.npz`). On macOS, delete any `.DS_Store` files in the image folder first, or PlantCV's checkerboard step errors.
-- **Pixel-to-mm scale** — `Current Experiment/TrayN/Pixels_to_mm_TN/pixels_to_mm_TN.ipynb` photographs a known-size square (e.g. a printed grid) and saves the mm-per-pixel scale to `TrayN_scale_values.json`.
+- **Fisheye correction** — `Camera_{Left,Middle,Right}_Calibration/Calibrate_Checkerboard.ipynb` uses photos of a **printed checkerboard** to compute each camera's lens-distortion matrices (`mtx.npz`, `dist.npz`). We use a checkerboard with 18 corners across and 25 down; the printable template lives in the lab Google Drive. Photograph it flat in the tray position, from several angles, and store the shots in that camera's `Checkerboard_Images/` folder. On macOS, delete any `.DS_Store` files in the image folder first, or PlantCV's checkerboard step errors.
+- **Pixel-to-mm scale** — `Current Experiment/TrayN/Pixels_to_mm_TN/pixels_to_mm_TN.ipynb` photographs a **reference of known real-world size** (a square/grid of known mm dimensions) and computes the mm-per-pixel scale, saved to `TrayN_scale_values.json`. This is a separate target from the fisheye checkerboard.
 
 ### 3. Process a tray
 
@@ -118,6 +118,50 @@ A few working notes baked into this notebook: segment end indices are **exclusiv
 **Storage.** Images are never committed to git. Each Pi writes to a local holder folder that rclone syncs to a Google Drive remote (`gdrive:Chamber/CLeft_Holder`, etc.). The laptop reads those same folders locally through the Google Drive desktop app. Repo-tracked outputs are limited to small JSON scale files, `plant_names` CSVs, and the notebooks themselves. Final per-tray analysis CSVs are written back to `Chamber/Final_Data/` in Google Drive.
 
 **Filenames.** Images use a sortable timestamp, `Chamber{Position}_image_YYYY-MM-DD--HH-MM.jpg`, which is what the processing and video notebooks rely on to order frames in time.
+
+---
+
+## Google Drive layout
+
+Google Drive is the shared store for everything too large or too raw for git: calibration photos, incoming images, and final data. The structure below is what we settled on. It is not enforced by the code (all paths are set in `config/paths.py`), so treat it as a working template and adapt the names to your own setup, as long as the paths in `config/paths.py` match.
+
+```
+My Drive/
+└── Chamber/
+    ├── CLeft_Calibration/            # one calibration folder per camera (Left/Middle/Right)
+    │   ├── Checkerboard_Images/      # photos of the printed checkerboard (fisheye correction)
+    │   ├── Fisheye_Calibration_Matrices/   # mtx.npz, dist.npz produced by Calibrate_Checkerboard
+    │   ├── Tray1_Calibration/        # pixel-to-mm reference photo for each tray on this camera
+    │   ├── Tray2_Calibration/
+    │   └── Tray3_Calibration/
+    ├── CMiddle_Calibration/          # Trays 4-5
+    ├── CRight_Calibration/           # Trays 6-8
+    ├── CLeft_Holder/                 # incoming images awaiting processing, per camera
+    │   ├── Tray1_Holder/             # the Pi syncs new photos here; notebooks read and then clear them
+    │   ├── Tray2_Holder/
+    │   └── Tray3_Holder/
+    ├── CMiddle_Holder/
+    ├── CRight_Holder/
+    ├── Final_Data/                   # processed output
+    │   ├── tray1_analysis_log.csv    # one CSV per tray, appended each run
+    │   ├── ...
+    │   ├── Experiment 1/             # finished experiments archived by number
+    │   ├── Experiment 2/
+    │   └── Experiment 3/
+    └── Longterm_Image_Storage/       # raw images kept after processing
+        ├── Experiment 4/            # archived per experiment (raw + After Processing/)
+        ├── Between Expt 3:4/        # images captured between experiments
+        └── Videos_Of_Indiv_Plants/ # rendered per-plant timelapse MP4s
+```
+
+A few ideas worth copying if you build your own:
+
+- **Mirror the camera/tray split in the folder names.** `CLeft/CMiddle/CRight` map to the three cameras, and each `TrayN_Holder` / `TrayN_Calibration` makes it obvious which tray a file belongs to.
+- **Separate "incoming" from "archived."** Holder folders hold only unprocessed images; once a notebook processes an image it moves to `Longterm_Image_Storage`, so a holder that is empty means "all caught up."
+- **Keep calibration next to the camera it describes.** Fisheye matrices and pixel-to-mm references live under each camera's calibration folder, so recalibrating one camera never touches another.
+- **Archive finished experiments by number** (`Experiment 1/2/3…`) rather than deleting, and label between-experiment captures (`Between Expt 3:4`) so no images are ambiguous.
+
+The per-tray analysis CSVs use these columns: `time, date, Tray Number, plant_number, plant_spec, plant_ID, Area (mm^2), Stress (%)`.
 
 ---
 
