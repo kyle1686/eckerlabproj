@@ -1,6 +1,6 @@
 # Plant Chamber Imaging & Analysis Pipeline
 
-A camera-to-data pipeline for tracking plant growth in the Ecker Lab (Salk Institute). Raspberry Pi cameras photograph trays of *Arabidopsis thaliana* (Col-0 and Salk T-DNA lines) inside a growth chamber on a fixed schedule. The images sync to Google Drive, where a set of JupyterLab notebooks correct, crop, and segment them with [PlantCV](https://plantcv.org/), measure each plant's leaf area over time, convert pixels to mm², and render per-plant timelapse videos.
+A camera-to-data pipeline for tracking plant growth in the Ecker Lab (Salk Institute). Raspberry Pi cameras photograph trays of *Arabidopsis Thaliana* (Col-0 and Salk T-DNA lines) inside a growth chamber on a fixed schedule. The images sync to Google Drive, where a set of JupyterLab notebooks correct, crop, and segment them with [PlantCV](https://plantcv.org/), measure each plant's leaf area over time, convert pixels to mm², and render per-plant timelapse videos.
 
 The repository holds **code and configuration only**. Raw images live in Google Drive (not in git), so a fresh clone is small.
 
