@@ -1,0 +1,77 @@
+# ---------------------------------------------------------------------------
+# TO COMPLETE ON PUBLICATION:
+# The paper ("preferred-citation" below) is a placeholder. When the PhenOmni
+# paper is published, update the preferred-citation block with:
+#   - final title (confirm)
+#   - author list and order (confirm)
+#   - journal (currently expected: Plant Methods), volume, issue, pages
+#   - year
+#   - doi and/or url
+#   - change `status:` from "in-preparation" to "published" and remove this note
+# Then add the human-readable citation to the "Citation" section of README.md.
+# ---------------------------------------------------------------------------
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata below. Once the associated paper is published, please cite that as well (see preferred-citation)."
+title: "PhenOmni: plant chamber imaging & analysis pipeline"
+abstract: >-
+  Code for a low-cost, Raspberry Pi based phenotyping system that images
+  Arabidopsis thaliana in a growth chamber and measures rosette area over time
+  using PlantCV, from image capture through per-plant timelapse videos.
+type: software
+repository-code: "https://github.com/kyle1686/eckerlabproj"
+authors:
+  - family-names: Illouz-Eliaz
+    given-names: Natanella
+    affiliation: "The Salk Institute for Biological Studies"
+  - family-names: Rosen
+    given-names: Maxwell G.
+    affiliation: "The Salk Institute for Biological Studies"
+  - family-names: Li
+    given-names: Kyle Ruian
+    affiliation: "The Salk Institute for Biological Studies"
+  - family-names: Abhilashkumar
+    given-names: Ariya Vaishnavi
+    affiliation: "The Salk Institute for Biological Studies"
+  - family-names: Toda
+    given-names: Trevor J.
+    affiliation: "The Salk Institute for Biological Studies"
+  - family-names: Jow
+    given-names: Bruce
+    affiliation: "The Salk Institute for Biological Studies"
+  - family-names: Ecker
+    given-names: Joseph R.
+    affiliation: "The Salk Institute for Biological Studies"
+
+# --- Associated paper (PLACEHOLDER — update on publication, see note at top) ---
+preferred-citation:
+  type: article
+  status: in-preparation
+  title: "PhenOmni: a scalable, low-cost phenotyping platform integrating imaging and soil moisture sensing for Arabidopsis growth analysis"
+  journal: "Plant Methods"   # expected; confirm on publication
+  # year:   TODO on publication
+  # volume: TODO on publication
+  # issue:  TODO on publication
+  # start:  TODO first page on publication
+  # doi:    TODO on publication
+  authors:
+    - family-names: Illouz-Eliaz
+      given-names: Natanella
+      affiliation: "The Salk Institute for Biological Studies"
+    - family-names: Rosen
+      given-names: Maxwell G.
+      affiliation: "The Salk Institute for Biological Studies"
+    - family-names: Li
+      given-names: Kyle Ruian
+      affiliation: "The Salk Institute for Biological Studies"
+    - family-names: Abhilashkumar
+      given-names: Ariya Vaishnavi
+      affiliation: "The Salk Institute for Biological Studies"
+    - family-names: Toda
+      given-names: Trevor J.
+      affiliation: "The Salk Institute for Biological Studies"
+    - family-names: Jow
+      given-names: Bruce
+      affiliation: "The Salk Institute for Biological Studies"
+    - family-names: Ecker
+      given-names: Joseph R.
+      affiliation: "The Salk Institute for Biological Studies"

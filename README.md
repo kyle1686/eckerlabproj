@@ -184,4 +184,15 @@ The per-tray analysis CSVs use these columns: `time, date, Tray Number, plant_nu
 
 ---
 
+## Citation
+
+If you use this project, please cite it. A machine-readable [`CITATION.cff`](CITATION.cff)
+is included, and GitHub shows a **"Cite this repository"** link in the sidebar from it.
+
+The associated paper — *PhenOmni*, a low-cost Raspberry Pi phenotyping platform, targeted
+at *Plant Methods* — is in preparation. Its citation will be added here and in
+`CITATION.cff` once it is published.
+
+---
+
 *Built by the Salk Institute's Ecker Lab.*
