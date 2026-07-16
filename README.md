@@ -29,6 +29,17 @@ At a glance, the pipeline has four stages:
 
 ---
 
+## Building the system
+
+New to the project and want to build it from scratch? **[SETUP_GUIDE.md](SETUP_GUIDE.md)**
+is a beginner-friendly, start-to-finish walkthrough: setting up a Raspberry Pi,
+connecting the camera, getting the code running, automating capture with cron, the
+JupyterLab/virtual-environment setup, syncing to Google Drive with rclone, and a
+hardware list with costs. An illustrated version with screenshots is in the lab
+Google Drive ("Steps for setting up Phenotyping System").
+
+---
+
 ## Repository map
 
 | Path | What it is |
