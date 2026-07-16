@@ -44,7 +44,7 @@ At a glance, the pipeline has four stages:
 | `crontab_controls.md` | Guide to scheduling automatic captures on the Pi with cron. |
 | `requirements.txt` | Pinned Python environment. |
 
-The eight trays are split across the three cameras: Trays 1–3 (Left), 4–5 (Middle), 6–8 (Right).
+The eight trays are split across the three cameras: Trays 1–3 (Left), 4–5 (Middle), 6–8 (Right). This split is not fixed by the code. The system is modular, so you are free to build your own tray numbering and camera-to-tray assignment that fits your space. This particular layout is simply what worked best for the camera coverage and tray count in our growth chamber.
 
 ---
 
