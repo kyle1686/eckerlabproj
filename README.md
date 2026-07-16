@@ -173,4 +173,4 @@ The per-tray analysis CSVs use these columns: `time, date, Tray Number, plant_nu
 
 ---
 
-*Built by the Ecker Lab.*
+*Built by the Salk Institute's Ecker Lab.*
