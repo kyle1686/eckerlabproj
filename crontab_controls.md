@@ -23,14 +23,14 @@ Here's a great resource for understanding/making your automation: https://cronta
 ## Image Capture Schedule
 
 Here's an example of running the python code to capture images automatically throughout the day:
-`*/20 10-18 * * * /usr/bin/python3 /home/user/your-repo-name/takepicture.py`
+`*/20 10-18 * * * /usr/bin/python3 /home/user/your-repo-name/On_Pi/Chamber_Pi/Chamber_Left/chamber_takepicture.py`
 
 ### Explanation:
 - "*/20" → Runs every **20 minutes**
 - "10-18" → Runs between **10 AM and 6 PM**
 - "\* \* \*" → Every day of every month
 - "/usr/bin/python3" → The path to the Python 3 interpreter (to find your specific path, type "which python3" into your Raspberry Pi terminal, and it'll tell you the path, and you should use that in this location)
-- "/home/user/your-repo-name/takepicture.py" → The script that captures the image
+- "/home/user/your-repo-name/On_Pi/Chamber_Pi/Chamber_Left/chamber_takepicture.py" → The script that captures the image (use the script matching this Pi's camera position)
 
 ---
 
