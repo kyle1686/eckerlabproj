@@ -35,7 +35,7 @@ At a glance, the pipeline has four stages:
 | --- | --- |
 | `config/paths.py` | Central path configuration. **Every machine edits the two base paths at the top** (`GITHUB_REPO_PATH`, `GOOGLE_DRIVE_FOLDER_PATH`); everything else is derived from them. |
 | `On_Pi/` | Raspberry Pi capture code. `Chamber_Pi/Chamber_{Left,Middle,Right}/` each hold `chamber_takepicture.py` (routine capture), `tray*_take_calibration_picture.py`, `capture_fisheye_calibration_checkerboard.py`, and `delete_todays_images.py`. `Desktop_Pi/` is the separate desktop imaging rig. |
-| `On_Laptop/Chamber/` | Main analysis workspace (runs on the laptop). |
+| `On_Laptop/Chamber/` | Main analysis workspace (runs on the lab computer). |
 | `On_Laptop/Chamber/Camera_{Left,Middle,Right}_Calibration/` | `Calibrate_Checkerboard.ipynb` — computes fisheye correction matrices for each camera. |
 | `On_Laptop/Chamber/Current Experiment/Tray1…Tray8/` | Per-tray processing. Each tray has `Process_TrayN.ipynb`, a `Pixels_to_mm_TN/` calibration notebook, and `plant_names_tN.csv`. |
 | `On_Laptop/Chamber/Process_all_Chamber*.py`, `Process_Whole_Chamber.py` | Batch drivers that process every tray in one run. |
@@ -115,7 +115,7 @@ A few working notes baked into this notebook: segment end indices are **exclusiv
 
 **Cameras.** Three Raspberry Pi units, one per chamber position (Left, Middle, Right), each capturing with `picamera2`. Capture is fully automated through cron; the Pi only needs power, network, and the synced Google Drive remote.
 
-**Storage.** Images are never committed to git. Each Pi writes to a local holder folder that rclone syncs to a Google Drive remote (`gdrive:Chamber/CLeft_Holder`, etc.). The laptop reads those same folders locally through the Google Drive desktop app. Repo-tracked outputs are limited to small JSON scale files, `plant_names` CSVs, and the notebooks themselves. Final per-tray analysis CSVs are written back to `Chamber/Final_Data/` in Google Drive.
+**Storage.** Images are never committed to git. Each Pi writes to a local holder folder that rclone syncs to a Google Drive remote (`gdrive:Chamber/CLeft_Holder`, etc.). The lab computer reads those same folders locally through the Google Drive desktop app. Repo-tracked outputs are limited to small JSON scale files, `plant_names` CSVs, and the notebooks themselves. Final per-tray analysis CSVs are written back to `Chamber/Final_Data/` in Google Drive.
 
 **Filenames.** Images use a sortable timestamp, `Chamber{Position}_image_YYYY-MM-DD--HH-MM.jpg`, which is what the processing and video notebooks rely on to order frames in time.
 
@@ -173,4 +173,4 @@ The per-tray analysis CSVs use these columns: `time, date, Tray Number, plant_nu
 
 ---
 
-*Maintained by the Ecker Lab. Questions about a specific step are usually answered by the comments in the relevant notebook.*
+*Built by the Ecker Lab.*
